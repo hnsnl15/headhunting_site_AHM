@@ -1,1 +1,1 @@
-# headhunting_site_AHM
+Headhunting site Project 2 for Kodego Bootcamp.
