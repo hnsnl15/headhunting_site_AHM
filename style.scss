@@ -1,9 +1,59 @@
-// Let's Code!!!
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Homemade+Apple&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+// Variables
+$primary-color: #1B2430;
+$secondary-color: #D6D5A8;
+$text-color-1: #FFF;
+
 * {
     margin: 0;
     box-sizing: 0;
     padding: 0;
 }
-.header {
-    background: green;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $primary-color;
+    color: $text-color-1;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    #logo-header {
+        h1 {
+            a {
+                color: $text-color-1;
+                text-decoration: none;
+
+                &:hover {
+                    color: rgba(179, 206, 249, 0.5);
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin-top: 10px;
+        
+        span {
+            user-select: none;
+        }
+
+        li {
+            margin: 0 30px;
+            
+            a {
+                text-decoration: none;
+                color: $text-color-1;
+
+                &:hover {
+                    color: rgba(179, 206, 249, 0.5);
+                }
+            }
+        }
+    }
 }

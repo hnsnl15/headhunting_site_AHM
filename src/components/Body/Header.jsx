@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Header = () => {
+function Header() {
     return (
-        <header className='header'>
+        <header className='header-nav'>
             {/* Logo */}
             <div id='logo-header'>
-                <h1>Logo</h1>
+                <h1><a href='#'>Logo</a></h1>
             </div>
             {/* Nav-Links */}
             <div>
                 <ul>
-                    <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Our Mission</a></li><span>|</span>
+                    <li><a href="#">Services</a></li><span>|</span>
+                    <li><a href="#">Developers</a></li><span>|</span>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>

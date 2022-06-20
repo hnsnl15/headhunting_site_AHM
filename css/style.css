@@ -1,30 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Homemade+Apple&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   margin: 0;
   box-sizing: 0;
   padding: 0;
 }
 
-.App {
-  background: lightblue;
-  height: 100vh;
-  width: 100vw;
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1B2430;
+  color: #FFF;
 }
 
-iframe {
-  height: 100vh;
-  width: 100vw;
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.header {
-  height: 50px;
-  width: 100vw;
-  display: grid;
-  place-content: center;
+.header-nav #logo-header h1 a {
+  color: #FFF;
+  text-decoration: none;
 }
 
-.footer {
-  height: 50px;
-  width: 100vw;
-  display: grid;
-  place-content: center;
+.header-nav #logo-header h1 a:hover {
+  color: rgba(179, 206, 249, 0.5);
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  margin-top: 10px;
+}
+
+.header-nav ul span {
+  user-select: none;
+}
+
+.header-nav ul li {
+  margin: 0 30px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header-nav ul li a:hover {
+  color: rgba(179, 206, 249, 0.5);
 }
