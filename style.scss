@@ -5,6 +5,8 @@
 $primary-color: #1B2430;
 $secondary-color: #D6D5A8;
 $text-color-1: #FFF;
+$hover-text-color: rgba(179, 206, 249, 0.5);
+
 
 * {
     margin: 0;
@@ -28,7 +30,7 @@ body {
                 text-decoration: none;
 
                 &:hover {
-                    color: rgba(179, 206, 249, 0.5);
+                    color: $hover-text-color;
                 }
             }
         }
@@ -51,7 +53,7 @@ body {
                 color: $text-color-1;
 
                 &:hover {
-                    color: rgba(179, 206, 249, 0.5);
+                    color: $hover-text-color;
                 }
             }
         }
