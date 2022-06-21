@@ -92,4 +92,13 @@ body {
             width: max-content;
         }
     }
+
+    .main-banner-section-2 {
+        div {
+            svg {
+                min-width: 70%;
+                max-width: 600px;
+            }
+        }
+    }
 }

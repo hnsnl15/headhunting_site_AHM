@@ -13,7 +13,7 @@ function MainPageBanner() {
         </section>
         <section className='main-banner-section-2'>
             <div>
-              <Svg1 width={700}/> 
+              <Svg1/> 
             </div>
         </section>
     </div>
