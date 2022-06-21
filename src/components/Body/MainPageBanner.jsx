@@ -1,5 +1,5 @@
 import React from 'react';
-import svg1 from '../imgrsr/svg1.svg'
+import svg1 from '../imgrsr/svg1.svg';
 
 function MainPageBanner() {
   return (
