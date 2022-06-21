@@ -12,7 +12,7 @@ function MainPageBanner() {
         </section>
         <section className='main-banner-section-2'>
             <div>
-              <img src={svg1} alt="A man standing" />
+              <img src={svg1} alt="A man standing" /> {/* nice one fafa adonis */}
             </div>
         </section>
     </div>
