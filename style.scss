@@ -17,14 +17,21 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: $primary-color;
     color: $text-color-1;
+    overflow-x: hidden;
 }
+// THIS IS A HEADER SECTION RULESET.
 .header-nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    min-width: 100vw;
+    min-height: max-content;
 
     #logo-header {
         h1 {
+            padding-left: 1.2rem;
+
             a {
                 color: $text-color-1;
                 text-decoration: none;
@@ -40,6 +47,7 @@ body {
         list-style: none;
         display: flex;
         margin-top: 10px;
+        padding-right: 1.2rem;
         
         span {
             user-select: none;
@@ -56,6 +64,31 @@ body {
                     color: $hover-text-color;
                 }
             }
+        }
+    }
+}
+// THIS IS THE MAINPAGE BANNER RULESET.
+.main-banner {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    section {
+        min-width: 50vw;
+        min-height: 100vh;
+    }
+
+    .main-banner-section-1 {
+        display: grid;
+        place-content: center;
+        padding: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            width: max-content;
+            transform: translateX(-130px);
         }
     }
 }
