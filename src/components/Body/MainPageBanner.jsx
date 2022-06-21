@@ -1,5 +1,5 @@
 import React from 'react';
-import svg1 from '../imgrsr/svg1.svg';
+import Svg1 from '../imgrsr/Svg1';
 
 function MainPageBanner() {
   return (
@@ -9,10 +9,11 @@ function MainPageBanner() {
               We are the global<br />services provider for your<br />
               external workforce.
             </h1>
+            
         </section>
         <section className='main-banner-section-2'>
             <div>
-              <img src={svg1} alt="A man standing" id='svg1'/> {/* nice one fafa adonis */}
+              <Svg1 width={700}/> 
             </div>
         </section>
     </div>
