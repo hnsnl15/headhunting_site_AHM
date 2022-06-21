@@ -1,4 +1,5 @@
 import React from 'react';
+import svg1 from '../imgrsr/svg1.svg'
 
 function MainPageBanner() {
   return (
@@ -11,7 +12,7 @@ function MainPageBanner() {
         </section>
         <section className='main-banner-section-2'>
             <div>
-              <img src="https://raw.githubusercontent.com/hnsnl15/headhunting_site_AHM/master/src/components/imgrsr/svg1.svg" alt="A man standing" />
+              <img src={svg1} alt="A man standing" />
             </div>
         </section>
     </div>
