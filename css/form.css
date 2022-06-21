@@ -1,0 +1,26 @@
+form {
+  margin: 0 auto;
+  width: min(600px, 90%);
+}
+
+
+form > * {
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+p[id$='-error'] {
+  color: red;
+  margin: 0;
+  display: none;
+}
+
+form input {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+form > input[type="submit"] {
+  width: fit-content;
+}
