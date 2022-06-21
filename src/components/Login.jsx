@@ -1,5 +1,5 @@
 import { ConstructionSharp } from '@mui/icons-material';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/form.css';
 import {Link} from 'react-router-dom'
 
@@ -8,6 +8,8 @@ export default function Login() {
   const [password, setPassword] = useState('');
   let userData = localStorage.getItem('users');
   const [users, setUsers] = useState( userData ? JSON.parse(userData) : []);
+
+  const [currentLogin, setCurrentLogin] = useState(localStorage.getItem('CurrentLogin') ? JSON.parse(localStorage.getItem('CurrentLogin')) : []);
 
   const handleEmail = ev => {
     setEmail(ev.target.value);
@@ -30,12 +32,23 @@ export default function Login() {
     if ( !email || !password || users.length == 0  || validUser.length !== 1 || validUser[0].password != password ) {
       $loginError.textContent = 'Please enter a valid email / password combination.';
       $loginError.style.display = 'block';
+
       return null;
     }
-
+    setCurrentLogin(validUser);
     console.log('Successfully logged in...')
     window.location = '/';
   }
+  useEffect(()=>{
+    localStorage.setItem('CurrentLogin', JSON.stringify(currentLogin))
+    if (currentLogin == ""){
+      
+    }else{
+      window.location = '/';
+    }
+  })
+
+
 
   return (
     <main>

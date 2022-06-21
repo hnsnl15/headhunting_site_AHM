@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Homemade+Apple&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-
 // Variables
 $primary-color: #1B2430;
 $secondary-color: #D6D5A8;
 $text-color-1: #FFF;
-$hover-text-color: rgba(179, 206, 249, 0.5);
-
-
+$hover-text-color: rgba(179,
+206,
+249,
+0.5);
 * {
     margin: 0;
     box-sizing: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: $primary-color;
     color: $text-color-1;
     overflow-x: hidden;
 }
+
 // THIS IS A HEADER SECTION RULESET.
 .header-nav {
     display: flex;
@@ -27,46 +28,69 @@ body {
     font-size: 1.2rem;
     min-width: 100vw;
     min-height: max-content;
-
     #logo-header {
         h1 {
             padding-left: 1.2rem;
-
             a {
                 color: $text-color-1;
                 text-decoration: none;
-
                 &:hover {
                     color: $hover-text-color;
                 }
             }
         }
     }
-
     ul {
         list-style: none;
         display: flex;
         margin-top: 10px;
         padding-right: 1.2rem;
-        
         span {
             user-select: none;
         }
-
         li {
             margin: 0 30px;
-            
             a {
                 text-decoration: none;
                 color: $text-color-1;
-
                 &:hover {
                     color: $hover-text-color;
+                }
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .profile-dropdown {
+                width: 200px;
+                height: auto;
+                background-color: rgb(246, 242, 242);
+                position: absolute;
+                padding: 10px;
+                border-radius: 5px;
+                transform: translate(-150px, 5px);
+                transition: 0.5s;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                h6 {
+                    color: rgb(33, 109, 70);
+                }
+                a {
+                    color: #1B2430;
+                    font-size: 1rem;
+                    &:hover {
+                        color: $secondary-color;
+                    }
                 }
             }
         }
     }
 }
+
 // THIS IS THE MAINPAGE BANNER RULESET.
 .main-banner {
     display: flex;
@@ -74,25 +98,21 @@ body {
     min-height: 100vh;
     flex-direction: row;
     justify-content: space-evenly;
-
     section {
         min-width: 50vw;
         min-height: 100vh;
     }
-
     .main-banner-section-1 {
         display: flex;
         align-items: flex-end;
         position: relative;
         bottom: 300px;
         left: 90px;
-
         h1 {
             font-size: 4vmin;
             width: max-content;
         }
     }
-
     .main-banner-section-2 {
         div {
             svg {

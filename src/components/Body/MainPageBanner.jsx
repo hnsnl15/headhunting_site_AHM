@@ -2,6 +2,8 @@ import React from 'react';
 import Svg1 from '../imgrsr/Svg1';
 
 function MainPageBanner() {
+
+  
   return (
     <div className='main-banner'>
         <section className='main-banner-section-1'>
