@@ -7,7 +7,7 @@ function Header() {
     
     const [active, setActive] = useState(false);
     let userData = localStorage.getItem('CurrentLogin');
-  const [users, setUsers] = useState( userData ? JSON.parse(userData) : []);
+    const [users, setUsers] = useState( userData ? JSON.parse(userData) : []);
     
     let name = users.map(user =>{
         return <h6>{user.firstname} {user.lastname}</h6>
