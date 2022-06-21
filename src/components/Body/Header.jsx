@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Header() {
     return (
@@ -14,7 +15,7 @@ function Header() {
                     <li><a href="/">Services</a></li><span>|</span>
                     <li><a href="/">Developers</a></li><span>|</span>
                     <li><a href="/">Contact</a></li>
-                    <li><a href='../components/Login.jsx'>Log In</a></li>
+                    <li><Link to='/Login'>Login</Link></li>
                 </ul>
             </div>
         </header>
