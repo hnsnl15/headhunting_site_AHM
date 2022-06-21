@@ -1,6 +1,7 @@
 import { ConstructionSharp } from '@mui/icons-material';
 import React, { useState } from 'react';
 import '../../css/form.css';
+import {Link} from 'react-router-dom'
 
 export default function Login() {
   const [email, setEmail]  = useState('');
@@ -51,7 +52,7 @@ export default function Login() {
           <p id='password-error'></p>
         </div>
         <div>
-          <a href='/register' style={{textDecoration:'none'}}>Not yet a member?</a>
+          <Link to='/register' style={{textDecoration:'none'}}>Not yet a member?</Link>
         </div>
         <input type="submit" value="Log In" />
       </form>
