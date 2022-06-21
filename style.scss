@@ -96,6 +96,19 @@ body {
     .main-banner-section-2 {
         div {
             width: 90%;
+
         }
+    }
+}
+
+#svg1 {
+    animation: rotatee .5s ease infinite;
+}
+@keyframes rotatee {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
