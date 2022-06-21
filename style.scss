@@ -81,14 +81,21 @@ body {
     }
 
     .main-banner-section-1 {
-        display: grid;
-        place-content: center;
-        padding: 2rem;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        bottom: 300px;
+        left: 90px;
 
         h1 {
-            font-size: 2rem;
+            font-size: 4vmin;
             width: max-content;
-            transform: translateX(-130px);
+        }
+    }
+
+    .main-banner-section-2 {
+        img {
+            width: 90%;
         }
     }
 }

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const MainPageBanner = () => {
+function MainPageBanner() {
   return (
     <div className='main-banner'>
         <section className='main-banner-section-1'>
@@ -10,7 +10,9 @@ const MainPageBanner = () => {
             </h1>
         </section>
         <section className='main-banner-section-2'>
-            <h1>fdsfgdfsd</h1>
+            <div>
+              <img src="img-rsr\svg-1.svg" alt="A man thinking for the future." />
+            </div>
         </section>
     </div>
   )
