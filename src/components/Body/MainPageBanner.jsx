@@ -11,7 +11,7 @@ function MainPageBanner() {
         </section>
         <section className='main-banner-section-2'>
             <div>
-              <img src="src\components\imgrsr\svg1.svg" alt="sdff" />
+              <img src="https://raw.githubusercontent.com/hnsnl15/headhunting_site_AHM/master/src/components/imgrsr/svg1.svg" alt="A man standing" />
             </div>
         </section>
     </div>
