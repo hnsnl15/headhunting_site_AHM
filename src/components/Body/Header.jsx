@@ -51,7 +51,7 @@ function Header() {
                     <li><img src={profile} alt="Profile" onClick={toggle} />
                     <div style={{display: active ? 'flex' : 'none' }} className="profile-dropdown">
                         <h6>{name}</h6>
-                        <a onClick={toggle} href="#">Settings</a>
+                        <Link onClick={toggle} to='/Settings'>Settings</Link>
                         <a onClick={logout} href="#">Logout</a>
                     </div>
                     </li>
