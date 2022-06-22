@@ -63,7 +63,7 @@ export default function Register() {
     }
     localStorage.setItem('users', JSON.stringify([...users, new_user]));
 
-    window.location = '/login'
+    window.location.href = './login'
   }
 
   return (
