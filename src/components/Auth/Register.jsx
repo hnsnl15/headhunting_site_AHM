@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../css/form.css';
+import '../../../css/form.css';
 
 export default function Register() {
   const [email, setEmail]  = useState('');

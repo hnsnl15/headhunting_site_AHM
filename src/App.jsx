@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Body/Header';
-import Login from './components/Login';
-import Register from './components/Register';
-import FrontPage from './components/Body/FrontPage';
-import Settings from './components/Settings';
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
+import FrontPage from './components/Front Page/FrontPage';
+import Settings from './components/SettingsFolder/Settings';
 
 function App() {
   return (
