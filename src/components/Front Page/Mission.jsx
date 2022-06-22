@@ -25,11 +25,19 @@ function Mission() {
         <div className='div-mission-1'>
           <h2><span>People</span> Management</h2>
             <p>We help companies to build their community of external talents and these talents to integrate into teams. Our goals is to break down barriers between internal talent and external talent.</p>
+        
+            <figure>
+              <img src='https://raw.githubusercontent.com/hnsnl15/headhunting_site_AHM/master/src/components/imgrsr/Peoplemanagemnt.svg' alt="" />
+            </figure>
         </div>
 
         <div className='div-mission-2'>
           <h2><span>Project</span> Management</h2>
           <p>We follow up on all projects carried out by external talents. We rely on out innovative digital solutions. We are committed to delivering.</p>
+
+          <figure>
+            <img src='https://raw.githubusercontent.com/hnsnl15/headhunting_site_AHM/b38f2ec1e70fe357d6c59fdc34fb1e31397d1cf0/src/components/imgrsr/Payment.svg' alt="" />
+          </figure>
         </div>
   
         <div className='div-mission-3'>
