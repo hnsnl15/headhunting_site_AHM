@@ -31,7 +31,20 @@ function Header() {
         } 
     }
     
-
+    function isLoggedIn() {
+        console.log(users)
+        if ( users.length === 0 ) {
+            return <li><Link to='/Login'>Login</Link></li>                        
+        } else {
+             return <li><img src={profile} alt="Profile" onClick={toggle} />
+                <div style={{display: active ? 'flex' : 'none' }} className="profile-dropdown">
+                    <h6>{name}</h6>
+                    <Link onClick={toggle} to='/Settings'>Settings</Link>
+                    <a onClick={logout} href="#">Logout</a>
+                </div>
+            </li>
+        }
+    }
     
 
     return (
@@ -46,15 +59,8 @@ function Header() {
                     <li><a href="#title1-mission">Our Mission</a></li><span>|</span>
                     <li><a href="/">Services</a></li><span>|</span>
                     <li><a href="/">Developers</a></li><span>|</span>
-                    <li><a href="/">Contact</a></li>
-                    <li><Link to='/Login'>Login</Link></li>
-                    <li><img src={profile} alt="Profile" onClick={toggle} />
-                    <div style={{display: active ? 'flex' : 'none' }} className="profile-dropdown">
-                        <h6>{name}</h6>
-                        <Link onClick={toggle} to='/Settings'>Settings</Link>
-                        <a onClick={logout} href="#">Logout</a>
-                    </div>
-                    </li>
+                    <li><a href="/">Contact</a></li><span>|</span>
+                    {isLoggedIn()}
                     
                 </ul>
             </div>
