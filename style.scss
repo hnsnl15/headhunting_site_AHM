@@ -161,4 +161,35 @@ body {
             max-width: 90%;
         }
     }
+
+}
+.mission-cards {
+    display: flex;
+    min-width: 100vw;
+    min-height: 60vh;
+    justify-content: space-evenly;
+    padding: 1rem 2rem;
+
+    div {
+        width: max-content;
+        max-width: 31%;
+        display: grid;
+        place-content: center;
+        position: relative;
+        
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    .div-mission-2 {
+        transform: translateY(-9px);
+    }
 }

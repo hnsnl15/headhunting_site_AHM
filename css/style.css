@@ -164,3 +164,36 @@ body {
   font-size: 1.3rem;
   max-width: 90%;
 }
+
+.mission-cards {
+  display: flex;
+  min-width: 100vw;
+  min-height: 60vh;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+}
+
+.mission-cards div {
+  width: max-content;
+  max-width: 31%;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.mission-cards div h2 {
+  font-size: 2rem;
+}
+
+.mission-cards div p {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.mission-cards div span {
+  color: #D6D5A8;
+}
+
+.mission-cards .div-mission-2 {
+  transform: translateY(-9px);
+}
