@@ -122,3 +122,40 @@ body {
         }
     }
 }
+// MISSION RULESET
+.our-mission {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+    width: 100vw;
+    padding: 0 auto;
+
+    figure {
+        min-width: 50%;
+        height: 50vh;
+        display: grid;
+        place-content: center;
+
+    }
+
+    .our-mission-text {
+        line-height: 2;
+        min-width: 50%;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        #title1-mission {
+            color: $secondary-color;
+            font-weight: 600;
+        }
+        #title2-mission {
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

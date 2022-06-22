@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Body/Header';
 import Login from './components/Login';
 import Register from './components/Register';
-import MainPageBanner from './components/Body/MainPageBanner';
+import FrontPage from './components/Body/FrontPage';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path='/' element={<MainPageBanner />} />
+        <Route path='/' element={<FrontPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
       </Routes>
