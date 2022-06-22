@@ -35,6 +35,10 @@ function Mission() {
         <div className='div-mission-3'>
           <h2><span>Payment</span> Management</h2>
           <p>We develop innovative and secure supplier invoicing, umbrella employment and payroll management solutions for our key account cutomenrs and for our freelance partners. We ensure fair remuneration for external talents.</p>
+        
+          <figure>
+            <img src='' alt="" />
+          </figure>
         </div>
   
       </section>
