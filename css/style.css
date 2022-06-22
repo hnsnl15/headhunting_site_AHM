@@ -116,6 +116,8 @@ body {
 
 .main-banner .main-banner-section-1 h1 {
   font-size: 4vmin;
+  font-weight: 600;
+  line-height: 1.5;
   width: max-content;
 }
 
@@ -151,7 +153,7 @@ body {
 
 .our-mission .our-mission-text #title1-mission {
   color: #D6D5A8;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .our-mission .our-mission-text #title2-mission {
@@ -159,5 +161,6 @@ body {
 }
 
 .our-mission .our-mission-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  max-width: 90%;
 }

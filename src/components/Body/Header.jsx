@@ -43,7 +43,7 @@ function Header() {
             {/* Nav-Links */}
             <div>
                 <ul>
-                    <li><a href="/">Our Mission</a></li><span>|</span>
+                    <li><a href="#title1-mission">Our Mission</a></li><span>|</span>
                     <li><a href="/">Services</a></li><span>|</span>
                     <li><a href="/">Developers</a></li><span>|</span>
                     <li><a href="/">Contact</a></li>
