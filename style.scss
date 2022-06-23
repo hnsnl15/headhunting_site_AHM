@@ -11,6 +11,10 @@ $hover-text-color: rgba(179,
     margin: 0;
     box-sizing: 0;
     padding: 0;
+    word-break: break-all;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -160,5 +164,43 @@ body {
             font-size: 1.3rem;
             max-width: 90%;
         }
+    }
+
+}
+.mission-cards {
+    display: flex;
+    min-width: 100vw;
+    min-height: 60vh;
+    justify-content: space-evenly;
+    padding: 1rem 2rem;
+    margin-top: 10vh;
+    line-height: 2;
+    flex-wrap: wrap;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.25rem;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+        span {
+            color: $secondary-color;
+        }
+        figure {
+            img {
+                width: 45vmin;
+            }
+        }
+    }
+
+    .div-mission-2 {
+        transform: translateY(-9px);
     }
 }
