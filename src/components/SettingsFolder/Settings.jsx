@@ -3,11 +3,14 @@ import '../../../css/settings.css';
 import profile from '../imgrsr/profile.png'
 
 export default function Settings() {
+
+
   return (
-    <div className='settings py-2' >
+    <form action="" className='settings py-1'>
         <div className="container">
            
            <div className='settings-header p-2 row'>
+            
                 <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
                     <div>
@@ -60,7 +63,6 @@ export default function Settings() {
                                 <td className='text-dark p-2'>React JS</td>
                             </tr>
                                 
-                            
                         </tbody>
                     </table>
             </div>
@@ -68,8 +70,8 @@ export default function Settings() {
                     <input type="button" className='btn btn-success' value={'Submit'} />
             </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+        </form>
   )
 }
