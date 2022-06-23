@@ -1,0 +1,36 @@
+main {
+    margin: 0 auto;
+    max-width: min(1600px, 90%);
+    min-height: 100vh;
+    /* background-color: white; */
+}
+
+.dev-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.dev-card {
+    border-radius: 5px;
+    background-color: #fefefe;
+    box-shadow: 3px 3px #cdcdcd;
+    color: black;
+}
+
+.dev-card-img {
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev-pic {
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%;
+}
+
+.dev-card-body {
+    padding: 1em 2em;
+}
