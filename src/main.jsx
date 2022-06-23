@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client';
+import Contact from './components/Front Page/Contact';
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
         <Route path='settings' element={<Settings />} />
+        <Route path='contact' element={<Contact />} />
       </Route>
     </Routes>
   </Router>

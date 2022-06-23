@@ -56,7 +56,7 @@ function Header() {
                     <li><a href="#title1-mission">Our Mission</a></li><span>|</span>
                     <li><a href="/">Services</a></li><span>|</span>
                     <li><Link to='/developers'>Developers</Link></li><span>|</span>
-                    <li><Link to="/">Contact</Link></li><span>|</span>
+                    <li><Link to="/contact">Contact</Link></li><span>|</span>
                     {isLoggedIn()}
                     
                 </ul>
