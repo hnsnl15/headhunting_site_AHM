@@ -37,7 +37,7 @@ export default function Settings() {
             <div className='row p-2'>
                     <h4 className='text-dark col-sm-2'>Skills :</h4> 
                     <input className='px-2 py-1 col-sm-6' type="text" />
-                    <input type="button" className='px-2 py-1 col-sm-2 mx-1 btn btn-primary' value={'Add'} />
+                    <input type="button" className='px-2 py-1 col-sm-2 mx-1 btn btn-info' value={'Add'} />
             </div>
             <div>
                     <table className='col-sm-8 bg-dark text-center offset-sm-2 striped'>
@@ -49,25 +49,30 @@ export default function Settings() {
                         <tbody className='bg-white'>
                             <tr>
                                 <td className='text-dark p-1'>HTML</td>
+                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
                             <tr>
                                 <td className='text-dark p-2'>CSS</td>
+                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
                             <tr>
                                 <td className='text-dark p-2'>Java Script</td>
+                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
                             <tr>
                                 <td className='text-dark p-2'>Its A trap</td>
+                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
                             <tr>
                                 <td className='text-dark p-2'>React JS</td>
+                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
                                 
                         </tbody>
                     </table>
             </div>
             <div className='row p-2'>
-                    <input type="button" className='btn btn-success' value={'Submit'} />
+                    <input type="button" className='btn btn-primary' value={'Submit'} />
             </div>
             </div>
 

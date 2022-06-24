@@ -1,26 +1,60 @@
 form {
-  margin: 0 auto;
-  width: min(600px, 90%);
+    margin: 0 auto;
+    width: min(600px, 90%);
 }
 
-
-form > * {
-  margin-bottom: 1.5em;
-  display: grid;
-  grid-template-columns: 1fr;
+form>* {
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 p[id$='-error'] {
-  color: red;
-  margin: 0;
-  display: none;
+    color: red;
+    margin: 0;
+    display: none;
 }
 
 form input {
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
 }
 
-form > input[type="submit"] {
-  width: fit-content;
+form>input[type="submit"] {
+    width: fit-content;
+}
+
+.form-field {
+    border-bottom: 1px solid black;
+}
+
+.Register {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+.Register .input {
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+}
+
+.login .input {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: none;
+    width: 100%;
 }

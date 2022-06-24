@@ -68,33 +68,34 @@ export default function Register() {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <form className='Register p-5' onSubmit={handleSubmit}>
+        <h3>Register</h3>
         <div className='form-field'>
-          <label htmlFor='email'>Email</label>
-          <input type='email' name='email' id='email' onChange={handleEmail} required />
+          {/* <label htmlFor='email'>Email</label> */}
+          <input className='input' type='email' name='email' id='email' placeholder='Email' onChange={handleEmail} required />
           <p id='email-error'></p>
         </div>
         <div className='form-field'>
-          <label htmlFor='firstname'>First Name</label>
-          <input type='text' name='firstname' id='firstname' onChange={handleFirstname} required />
+          {/* <label htmlFor='firstname'>First Name</label> */}
+          <input className='input' type='text' name='firstname' id='firstname' placeholder='First Name' onChange={handleFirstname} required />
           <p id='firstname-error'></p>
         </div>
         <div className='form-field'>
-          <label htmlFor='lastname'>Last Name</label>
-          <input type='text' name='lastname' id='lastname' onChange={handleLastname} required />
+          {/* <label htmlFor='lastname'>Last Name</label> */}
+          <input className='input' type='text' name='lastname' id='lastname' placeholder='Last Name' onChange={handleLastname} required />
           <p id='lastname-error'></p>
         </div>
         <div className='form-field'>
-          <label htmlFor='password'>Password</label>
-          <input type='password' name='password' id='password' minLength='8' onChange={handlePassword} required />
+          {/* <label htmlFor='password'>Password</label> */}
+          <input className='input' type='password' name='password' id='password' placeholder='Password' minLength='8' onChange={handlePassword} required />
           <p id='password-error'></p>
         </div>
         <div className='form-field'>
-          <label htmlFor='cpassword'>Confim Password</label>
-          <input type='password' name='cpassword' id='cpassword' minLength='8' onChange={handleCPassword} required />
+          {/* <label htmlFor='cpassword'>Confim Password</label> */}
+          <input className='input' type='password' name='cpassword' id='cpassword' placeholder='Confirm Password' minLength='8' onChange={handleCPassword} required />
           <p id='cpassword-error'></p>
         </div>
-        <input type="submit" value="Register" />
+        <input className='w-100 btn btn-secondary my-2 rounded-0' type="submit" value="Register" />
       </form>
     </main>
   )

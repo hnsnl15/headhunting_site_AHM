@@ -54,7 +54,7 @@ export default function Contact() {
                 <div className='row d-flex align-items-center'>
                   <textarea name="message" id="message" cols="30" rows="5" placeholder='Message'></textarea>
                 </div>
-                <input type="submit" className='btn btn-warning' value={'SEND'} />
+                <input type="submit" className='btn btn-secondary rounded-0' value={'SEND'} />
             </div>
         </div>
     </form>
