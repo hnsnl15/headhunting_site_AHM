@@ -3,7 +3,7 @@ form {
     width: min(600px, 90%);
 }
 
-form>* {
+form > * {
     margin-bottom: 1.5em;
     display: grid;
     grid-template-columns: 1fr;

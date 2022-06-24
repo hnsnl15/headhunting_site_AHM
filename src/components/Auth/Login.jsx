@@ -1,15 +1,12 @@
-import { ConstructionSharp } from '@mui/icons-material';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../../../css/form.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   const [email, setEmail]  = useState('');
   const [password, setPassword] = useState('');
   let userData = localStorage.getItem('users');
   const [users, setUsers] = useState( userData ? JSON.parse(userData) : []);
-
-  const [currentLogin, setCurrentLogin] = useState(localStorage.getItem('CurrentLogin') ? JSON.parse(localStorage.getItem('CurrentLogin')) : []);
 
   const handleEmail = ev => {
     setEmail(ev.target.value);
@@ -35,20 +32,10 @@ export default function Login() {
 
       return null;
     }
-    setCurrentLogin(validUser);
-    console.log('Successfully logged in...')
+
+    localStorage.setItem('CurrentUser', JSON.stringify(validUser))
     window.location = '/';
   }
-  useEffect(()=>{
-    localStorage.setItem('CurrentLogin', JSON.stringify(currentLogin))
-    if (currentLogin == ""){
-      
-    }else{
-      window.location = '/';
-    }
-  })
-
-
 
   return (
     <main>
@@ -79,29 +66,4 @@ export default function Login() {
       </form>
     </main>
   )
-
-  // const mainStyle = {
-  //   display: 'grid',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  // }
-
-  // return (
-  //   <main style={mainStyle}>
-  //     <form className='container'>
-  //       <div class="mb-3 row">
-  //         <label for="exampleInputEmail1" class="form-label">Email address</label>
-  //         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
-  //       </div>
-  //       <div class="mb-3 row">
-  //         <label for="exampleInputPassword1" class="form-label">Password</label>
-  //         <input type="password" class="form-control" id="exampleInputPassword1" required/>
-  //       </div>
-  //       <div class="mb-3 row">
-  //         <a href='/register' style={{textDecoration:'none'}}>Not yet a member?</a>
-  //       </div>
-  //       <button type="submit" class="btn btn-primary">Submit</button>
-  //     </form>
-  //   </main>
-  // )
 }

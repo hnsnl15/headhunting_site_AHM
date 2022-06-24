@@ -1,0 +1,114 @@
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.4rem;
+  font-size: 1.2rem;
+  min-width: 100vw;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+
+.header-nav #logo-header h1 a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav #logo-header h1 a:hover {
+  color: rgba(179, 206, 249, 0.5);
+}
+ 
+.header-nav ul {
+  list-style: none;
+  display: none;
+}
+
+.header-nav ul span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  
+  .header-nav #logo-header h1 {
+    padding-left: 1.2rem;
+  }
+  
+  .header-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    padding-right: 1.2rem;
+  }
+
+  .header-nav ul li {
+    margin: 0 30px;
+  }
+  
+  .header-nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .header-nav ul li a:hover {
+    color: rgba(179, 206, 249, 0.5);
+  }
+  
+  .header-nav ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .header-nav ul li .profile-dropdown {
+    width: 200px;
+    height: auto;
+    background-color: #f6f2f2;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-transform: translate(-150px, 5px);
+            transform: translate(-150px, 5px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .header-nav ul li .profile-dropdown h6 {
+    color: #216d46;
+  }
+  
+  .header-nav ul li .profile-dropdown a {
+    color: #1B2430;
+    font-size: 1rem;
+  }
+  
+  .header-nav ul li .profile-dropdown a:hover {
+    color: #D6D5A8;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import profile_picture from '../imgrsr/profile.png';
 
-export default function DevCard() {
+export default function DevCard(props) {
+  console.log(props.name)
+
   return (
     <div className='dev-card'>
       <div className='dev-card-img'>
@@ -9,7 +11,7 @@ export default function DevCard() {
       </div>
       <div className='dev-card-body'>
         <div className='dev-card-text'>
-          <h2 className='dev-name'>Lastname, First Name</h2>
+          <h2 className='dev-name'>{props.name}</h2>
           <p className='dev-role'>Full Stack Web Developer</p>
           <p className='dev-description'>Lorem ipsum blah blah blah x2 x2 x2 times two.</p>
           <p className='dev-location'>Manila, PH</p>
