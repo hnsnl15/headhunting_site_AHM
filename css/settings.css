@@ -124,8 +124,8 @@
   background-color: #f8ec03;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .settings .container .settings-header .toggle .editText {
@@ -136,4 +136,9 @@
 
 .settings .container .settings-body div table {
   border: 1px solid gray;
+  text-align: center;
+}
+
+.settings .container .settings-body #btnAddTechnology {
+  text-align: center;
 }

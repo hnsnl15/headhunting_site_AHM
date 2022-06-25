@@ -86,7 +86,7 @@ $hover-text-color: rgba(179,
                         border-radius: 50%;
                         background-color: #f8ec03;
                         transform: translateX(0);
-                        transition: 0.5s;
+                        transition: 0.7s;
                     }
                 }
                 .editText {
@@ -99,8 +99,14 @@ $hover-text-color: rgba(179,
             div {
                 table {
                     border: 1px solid gray;
+                    text-align: center;
                 }
+            }
+            #btnAddTechnology {
+                text-align: center;
             }
         }
     }
 }
+
+@media screen and (max-width: 600px) {}
