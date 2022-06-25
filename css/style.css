@@ -402,6 +402,9 @@ body {
     margin: 0 auto;
     transform: translateX(-10px);
   }
+  .our-mission-text p, .our-mission-text h1 {
+    transform: scale(0.85);
+  }
 }
 
 @media screen and (max-width: 767px) {
