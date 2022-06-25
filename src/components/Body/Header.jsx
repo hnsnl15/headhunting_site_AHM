@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../../../css/header.css';
 import profile from '../imgrsr/profile.png';
@@ -34,11 +35,13 @@ function Header() {
             return <li><Link to='/login'>Login</Link></li>                        
         } else {
              return <li><img src={profile} alt="Profile" onClick={toggleDropdown} />
-                <div style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown">
+                <motion.div 
+                style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown"
+                transition={{type:'spring', stiffness: 100}} >
                     <h6>{name()}</h6>
                     <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
                     <a onClick={logout} href="#">Logout</a>
-                </div>
+                </motion.div>
             </li>
         }
     }
@@ -81,7 +84,7 @@ function Header() {
     return (
         <header className='header-nav'>
             <div id='logo-header'>
-                <h1><Link to='/'>KodeKo</Link></h1>
+                <h1><Link to='/'>Kode<span className='ko'>Ko</span></Link></h1>
             </div>
             {isMobile()}
             
