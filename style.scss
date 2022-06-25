@@ -281,7 +281,7 @@ body {
 
         img {
             width: 50vw;
-            max-width: 500px;
+            max-width: 600px;
             border-radius: 100px;
         }
 
@@ -450,7 +450,6 @@ body {
     height: max-content;
     align-items: flex-end;
     flex-wrap: wrap;
-    transition: all 250ms ease-in-out;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.7);
     a {
