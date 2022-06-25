@@ -97,6 +97,7 @@ function Header() {
             style={{
                 width: '100vw', 
                 originY: 0,
+                originX: 1,
                 display: mobileMenuActive ? 'flex' : 'none'}}
                 animate={{ scale: on ? 1 : 0 }}
                 transition={{ ease: 'easeOut' }}
