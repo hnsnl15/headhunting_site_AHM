@@ -235,6 +235,7 @@ body {
 .our-services {
     height: auto;
     width: 100vw;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -278,30 +279,36 @@ body {
     }
 
     .our-services-fig-1 {
-        width: 100vw;
+        width: 100%;
+        margin: 0 auto;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        padding:  2rem 0;
-        transform: translateX(120px);
+        padding:  2rem auto;
         gap: 30px;
+
         img {
-            max-width: 40rem;
+            width: 50vw;
+            min-width: 75%;
+            max-width: 500px;
             border-radius: 100px;
         }
 
     }
 
     .our-services-fig-2 {
-            width: 100vw;
+            width: 100%;
+            margin: 0 auto;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             gap: 30px;
-            padding: 2rem 0;
-            transform: translateX(-120px);
+            padding: 2rem auto;
             
             img {
-                max-width: 300px;
+                width: 50vw;
+                min-width: 75%;
+                max-width: 500px;
                 border-radius: 100px;
             }
             
@@ -359,6 +366,50 @@ body {
 @media screen and (max-width: 1226px) {
     .our-mission {
         flex-wrap: wrap-reverse;
+    }
+}
+@media screen and (max-width: 1086px) {
+    .our-services {
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100vw;
+        figcaption {
+            margin: 3px auto;
+            padding: 0 auto;
+            width: 80%;
+            gap: 2px;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                align-self: center;
+            }
+            a {
+                align-self: center;
+            }
+        }
+        .our-services-fig-1 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 auto;
+            margin: 0 auto;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+        .our-services-fig-2 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 auto;
+            margin: 0 auto;
+
+            img {
+                margin: 0 auto;
+            }
+        }
     }
 }
 @media screen and (max-width: 1055px) {
