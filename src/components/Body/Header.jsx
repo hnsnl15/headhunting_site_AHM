@@ -37,7 +37,7 @@ function Header() {
         } else {
              return <li><img src={profile} alt="Profile" onClick={toggleDropdown} />
                 <div style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown">
-                    <h6>{name(currentUser[0])}</h6>
+                    <h6>{name(currentUser)}</h6>
                     <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
                     <a onClick={logout} href="#">Logout</a>
                 </div>
