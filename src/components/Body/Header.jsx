@@ -61,7 +61,7 @@ function Header() {
         const { height, width } = useWindowDimensions();
         if (width < 768) {
             return <div>
-                <h1><MenuIcon style={{fontSize:'2rem'}} onClick={toggleMobileMenu}/></h1>
+                <h1 className='toggledMenuIcon'><MenuIcon style={{fontSize:'2rem'}} onClick={toggleMobileMenu}/></h1>
                 {/* {toggleMobileMenu} */}
             </div>;
         } else {

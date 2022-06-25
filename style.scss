@@ -433,9 +433,21 @@ body {
             }
         }
     }
-} 
+}
+.toggledMenuIcon {
+    z-index: 100;
+}
 .toggledMenu {
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 20px;
+    flex-direction: column;
+    margin: 0 auto;
+    transform-origin: right;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
     height: max-content;
     align-items: center;
     flex-wrap: wrap;
@@ -445,7 +457,10 @@ body {
     a {
         text-decoration: none;
         color: $primary-color;
-        font-weight: 600;
+        font-weight: 500;
+        &:focus {
+            color: $secondary-color;
+        }
     }
 }
 
