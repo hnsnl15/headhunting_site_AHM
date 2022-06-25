@@ -8,8 +8,7 @@ function MainPageBanner() {
     <div className='main-banner'>
         <section className='main-banner-section-1'>
             <h1>
-              We are the global<br />services provider for your<br />
-              external workforce.
+              We are the global services provider for your external workforce.
             </h1>
             
         </section>

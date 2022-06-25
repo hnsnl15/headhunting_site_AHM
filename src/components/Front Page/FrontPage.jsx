@@ -9,8 +9,6 @@ function FrontPage() {
     <>
     <MainPageBanner/>
     <Mission/>
-    {/* <OurServices/>
-    <Brands/> */}
     </>
   )
 }

@@ -62,7 +62,7 @@ export default function Register() {
       password
     }
     localStorage.setItem('users', JSON.stringify([...users, new_user]));
-
+    localStorage.setItem('CurrentUser', JSON.stringify(new_user))
     window.location = '/'
   }
 
