@@ -4,6 +4,11 @@ import DevCard from './DevCard';
 import SearchBar from './SearchBar';
 
 export default function Developers() {
+  // exlucde current user from developers list
+  // const currUserData = localStorage.getItem('CurrentUser');
+  // const currUser = currUserData
+  //                ? JSON.parse(currUserData)
+  //                : [];
   const userData = localStorage.getItem('users');
   const users = userData
               ? JSON.parse(userData)
@@ -11,7 +16,8 @@ export default function Developers() {
 
   function renderDevCards() {
     if (users.length > 0) {
-      users.map( user => {
+      return users.map( user => {
+        // if (user.id === currUser[0].id) return null;
         return <DevCard 
           name = {`${user.lastname}, ${user.firstname}`}
         />
@@ -22,12 +28,12 @@ export default function Developers() {
   }
 
   return (
-    <main>
+    <section>
       <SearchBar />
       <h1>Developers</h1>
       <div className='dev-grid'>
         {renderDevCards()}
       </div>
-    </main>
+    </section>
   )
 }

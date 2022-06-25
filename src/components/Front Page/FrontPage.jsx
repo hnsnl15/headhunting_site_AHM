@@ -5,8 +5,8 @@ import Mission from './Mission';
 function FrontPage() {
   return (
     <>
-    <MainPageBanner/>
-    <Mission/>
+      <MainPageBanner/>
+      <Mission/>
     </>
   )
 }

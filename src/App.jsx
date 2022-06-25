@@ -24,26 +24,28 @@ function App() {
   <Router>
     <Header />
 
-    <Routes>
-      <Route path='/' element={<FrontPage />} />
-      <Route path='/developers' element={
-        <Developers 
-          currUser = {currUser}  
-        />
-      } />
-      <Route path='/login' element={
-        <Login 
-          setCurrUser = {setCurrUser} 
-        />
-      } />
-      <Route path='/register' element={<Register />} />
-      <Route path='/settings' element={
-        <Settings 
-          currUser = {currUser}
-        />
-      } />
-      <Route path='/contact' element={<Contact />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path='/' element={<FrontPage />} />
+        <Route path='/developers' element={
+          <Developers 
+            currUser = {currUser}  
+          />
+        } />
+        <Route path='/login' element={
+          <Login 
+            setCurrUser = {setCurrUser} 
+          />
+        } />
+        <Route path='/register' element={<Register />} />
+        <Route path='/settings' element={
+          <Settings 
+            currUser = {currUser}
+          />
+        } />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+    </main>
   </Router>
   )
 }

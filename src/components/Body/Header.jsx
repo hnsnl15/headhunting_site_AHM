@@ -6,20 +6,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import useWindowDimensions from '../Hooks/useWindowDimensions';
 
 function Header() {       
-    const [active, setActive] = useState(false);
+    const [dropdownActive, setDropdownActive] = useState(false);
     let userData = localStorage.getItem('CurrentUser');
-    const [users, setUsers] = useState( userData ? JSON.parse(userData) : []);
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
-    
-    let name = users.map(user =>{
-        return <h6>{user.firstname} {user.lastname}</h6>
-    })
+    const [currentUser, setCurrentUser] = useState( userData ? JSON.parse(userData) : null);
+    const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
-    function toggle(){
-        if(name == ''){
-        }else{
-            setActive(!active);
-        }
+    const name = (user) => <h6>{`${user.firstname} ${user.lastname}`}</h6>
+
+    function toggleDropdown() {
+        setDropdownActive(!dropdownActive);
+    }
+
+    function hideDropdown() {
+        setDropdownActive(false);
     }
     
     function logout(){
@@ -31,13 +30,13 @@ function Header() {
     }
     
     function isLoggedIn() {
-        if ( users.length === 0 ) {
+        if ( !currentUser ) {
             return <li><Link to='/login'>Login</Link></li>                        
         } else {
-             return <li><img src={profile} alt="Profile" onClick={toggle} />
-                <div style={{display: active ? 'flex' : 'none' }} className="profile-dropdown">
-                    <h6>{name}</h6>
-                    <Link onClick={toggle} to='/settings'>Settings</Link>
+             return <li><img src={profile} alt="Profile" onClick={toggleDropdown} />
+                <div style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown">
+                    <h6>{name(currentUser[0])}</h6>
+                    <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
                     <a onClick={logout} href="#">Logout</a>
                 </div>
             </li>
@@ -45,17 +44,17 @@ function Header() {
     }
 
     function toggleMobileMenu() {
-        setShowMobileMenu(!showMobileMenu);
-        if (showMobileMenu) {
-            return <div style={{width: '100vw', background: 'white'}}>
-                <a href="/#title1-mission">Our Mission</a>
-                <a href="/">Services</a>
-                <Link to='/developers'>Developers</Link>
-                <Link to="/contact">Contact</Link>
-            </div>
-        } else {
-            return null;
-        }
+        setMobileMenuActive(!mobileMenuActive);
+        // if (mobileMenuActive) {
+        //     return <div style={{width: '100vw', background: 'white'}}>
+        //         <a href="/#title1-mission">Our Mission</a>
+        //         <a href="/">Services</a>
+        //         <Link to='/developers'>Developers</Link>
+        //         <Link to="/contact">Contact</Link>
+        //     </div>
+        // } else {
+        //     return null;
+        // }
     }
 
     function isMobile() {
@@ -63,15 +62,15 @@ function Header() {
         if (width < 768) {
             return <div>
                 <h1><MenuIcon style={{fontSize:'2rem'}} onClick={toggleMobileMenu}/></h1>
-                {toggleMobileMenu}
+                {/* {toggleMobileMenu} */}
             </div>;
         } else {
             return <div>
                 <ul>
-                    <li><a href="/#title1-mission">Our Mission</a></li><span>|</span>
-                    <li><a href="/">Services</a></li><span>|</span>
-                    <li><Link to='/developers'>Developers</Link></li><span>|</span>
-                    <li><Link to="/contact">Contact</Link></li><span>|</span>
+                    <li><a onClick={hideDropdown} href="/#title1-mission">Our Mission</a></li><span>|</span>
+                    <li><a onClick={hideDropdown} href="/">Services</a></li><span>|</span>
+                    <li><Link onClick={hideDropdown} to='/developers'>Developers</Link></li><span>|</span>
+                    <li><Link onClick={hideDropdown} to="/contact">Contact</Link></li><span>|</span>
                     {isLoggedIn()}  
                 </ul>
             </div>
@@ -85,6 +84,13 @@ function Header() {
                 <h1><Link to='/'>KodeKo</Link></h1>
             </div>
             {isMobile()}
+            
+            <div style={{width: '100vw', background: 'white', display: mobileMenuActive ? 'block' : 'none'}}>
+                <a href="/#title1-mission">Our Mission</a>
+                <a href="/">Services</a>
+                <Link to='/developers'>Developers</Link>
+                <Link to="/contact">Contact</Link>
+            </div>
         </header>
     )
 }

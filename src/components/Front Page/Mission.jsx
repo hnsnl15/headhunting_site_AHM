@@ -4,7 +4,7 @@ import SolutionSvg from '../imgrsr/SolutionSvg';
 function Mission() {
   return (
     <>
-    <section className='our-mission'>
+      <section className='our-mission'>
         <figure className='our-mission-figure-1'>
             <SolutionSvg />
         </figure>
@@ -17,8 +17,7 @@ function Mission() {
                 Our goal is to bring together large organizations, pure-player SMEs, start-ups and freelancers and help them, to become change makers.
             </p>
         </section>
-
-    </section>
+      </section>
 
       <section className='mission-cards'>
 
