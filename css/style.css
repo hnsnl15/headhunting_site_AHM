@@ -397,7 +397,8 @@ body {
     place-items: center;
   }
   .our-mission-text h1 {
-    font-size: 6.2vw;
+    font-size: 7.5vw;
+    word-wrap: break-word;
     padding: 0;
     margin: 0 auto;
     transform: translateX(-10px);
