@@ -9,10 +9,9 @@ function Header() {
     const [dropdownActive, setDropdownActive] = useState(false);
     let userData = localStorage.getItem('CurrentUser');
     const [currentUser, setCurrentUser] = useState( userData ? JSON.parse(userData) : null);
-    console.log(currentUser);
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
-    const name = (user) => <h6>{`${user.firstname} ${user.lastname}`}</h6>
+    const name = (user) => <h6>{`${user['firstname']} ${user['lastname']}`}</h6>
 
     function toggleDropdown() {
         setDropdownActive(!dropdownActive);
@@ -31,7 +30,6 @@ function Header() {
     }
     
     function isLoggedIn() {
-        console.log(currentUser)
         if ( !currentUser ) {
             return <li><Link to='/login'>Login</Link></li>                        
         } else {
