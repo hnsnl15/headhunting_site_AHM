@@ -11,10 +11,19 @@ $hover-text-color: rgba(179,
     margin: 0;
     box-sizing: 0;
     padding: 0;
-    word-break: break-all;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+}
+
+#root {
+    width: 100vw;
+}
+
+p {
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
 }
 
 body {
@@ -22,6 +31,7 @@ body {
     background-color: $primary-color;
     color: $text-color-1;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 // THIS IS A HEADER SECTION RULESET.
@@ -30,8 +40,8 @@ body {
     justify-content: space-between;
     padding: 1.4rem;
     font-size: 1.2rem;
-    min-width: 100vw;
-    min-height: max-content;
+    width: 100vw;
+
     #logo-header {
         h1 {
             padding-left: 1.2rem;
@@ -99,31 +109,37 @@ body {
 .main-banner {
     display: flex;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: row;
-    justify-content: space-evenly;
     section {
-        min-width: 50vw;
-        min-height: 100vh;
+        width: 50vw;
+        height: 100vh;
     }
     .main-banner-section-1 {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        bottom: 300px;
-        left: 90px;
         h1 {
-            font-size: 4vmin;
+            font-size: 2rem;
             font-weight: 600;
             line-height: 1.5;
             width: max-content;
+            transform: translateX(-40px);
         }
     }
     .main-banner-section-2 {
+        display: grid;
+        place-content: center;
+        padding-right: 1rem;
         div {
+            width: 50vw;
+            display: grid;
+            place-items: center;
             svg {
-                min-width: 70%;
-                max-width: 600px;
+                width: 90%;
+                max-width: 500px;
+                height: max-content;
             }
         }
     }
@@ -131,26 +147,31 @@ body {
 // MISSION RULESET
 .our-mission {
     display: flex;
-    justify-content: space-evenly;
-    padding: 3rem;
+    justify-content: center;
     width: 100vw;
-    padding: 0 auto;
+    padding: 0 1rem;
+    gap: 30px;
 
     figure {
-        min-width: 50%;
-        height: 50vh;
+        min-width: 50vw;
+        height: max-content;
         display: grid;
-        place-content: center;
+        place-items: center;
 
+        svg {
+            width: 80%;
+        }
     }
 
     .our-mission-text {
         line-height: 2;
-        min-width: 50%;
+        min-width: 50vw;
+        display: grid;
+        place-content: center;
 
         h1 {
-            font-size: 2.5rem;
             margin-bottom: 30px;
+            width: 90%;
         }
         #title1-mission {
             color: $secondary-color;
@@ -162,20 +183,21 @@ body {
 
         p {
             font-size: 1.3rem;
-            max-width: 90%;
+            width: 90%;
         }
     }
 
 }
 .mission-cards {
     display: flex;
-    min-width: 100vw;
-    min-height: 60vh;
-    justify-content: space-evenly;
-    padding: 1rem 2rem;
+    width: 100vw;
+    height: 60vh;
+    justify-content: center;
+    padding: 1rem 4rem;
     margin-top: 10vh;
     line-height: 2;
     flex-wrap: wrap;
+    gap: 60px;
 
     div {
         display: flex;
@@ -195,12 +217,162 @@ body {
         }
         figure {
             img {
-                width: 45vmin;
+                width: 80%;
             }
         }
     }
 
     .div-mission-2 {
         transform: translateY(-9px);
+    }
+}
+// OUR SERVICES RULESET
+.our-services {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin: 20vh auto 5vh;
+    }
+    
+    figcaption {
+        max-width: 350px;
+        text-align: start;
+        align-self: center;
+        line-height: 2;
+        display: grid;
+        gap: 40px;
+
+        p {
+            font-size: 1.2rem;
+            text-align: justify;
+        }
+
+        a {
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            width: max-content;
+            background: $secondary-color;
+            border-radius: 20px;
+            text-decoration: none;
+            color: $primary-color;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: rgba(0,0,0,0.4);
+                color: #fff;
+            }
+        }
+    }
+
+    .our-services-fig-1 {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        padding:  2rem 0;
+        transform: translateX(120px);
+        gap: 30px;
+        img {
+            max-width: 40rem;
+            border-radius: 100px;
+        }
+
+    }
+
+    .our-services-fig-2 {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 30px;
+            padding: 2rem 0;
+            transform: translateX(-120px);
+            
+            img {
+                max-width: 300px;
+                border-radius: 100px;
+            }
+            
+    }  
+}
+
+     //BRANDS RULESET
+    .sponsor-section {
+        height: auto;
+        margin-top: 10vh;
+        width: 100vw;
+        background: $text-color-1;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+            color: $primary-color;
+            font-weight: 700;
+        }
+
+        .brands {
+            display: flex;
+            justify-content: space-around;
+            padding: 100px 0;
+
+            span img {
+                max-width: 250px;
+            }
+        }
+    }
+
+// MEDIA QUERY
+@media screen and (max-width:776px) {
+    .main-banner {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5vh;
+
+        .main-banner-section-1 {
+            width: 100vw;
+            padding: 1rem;
+            h1 {
+                transform: translateX(0);
+            }
+        }
+
+        .main-banner-section-2 {
+            width: 100vw;
+        }
+    }
+}
+@media screen and (max-width: 1226px) {
+    .our-mission {
+        flex-wrap: wrap-reverse;
+    }
+}
+@media screen and (max-width: 1055px) {
+    .our-mission-text {
+        padding-left: 3rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .our-mission {
+        flex-direction: column-reverse;
+    }
+    .our-mission-text {
+        width: 100vw;
+        padding: 1rem;
+        display: grid;
+        place-items: center;
+
+        p {
+            font-size: 1rem;
+        }
     }
 }
