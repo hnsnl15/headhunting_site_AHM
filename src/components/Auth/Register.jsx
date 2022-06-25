@@ -7,7 +7,9 @@ export default function Register() {
   const [lastname, setLastname] = useState('');
   const [password, setPassword] = useState('');
   const [cPassword, setCPassword] = useState('');
-
+  const [address, setAddress] = useState('');
+  const [position, setPosition] = useState('');
+  const [age, setAge] = useState(0);
   const handleEmail = ev => {
     setEmail(ev.target.value);
   }
@@ -59,7 +61,10 @@ export default function Register() {
       email,
       firstname,
       lastname,
-      password
+      password,
+      age,
+      address,
+      position
     }
     localStorage.setItem('users', JSON.stringify([...users, new_user]));
     localStorage.setItem('CurrentUser', JSON.stringify(new_user))

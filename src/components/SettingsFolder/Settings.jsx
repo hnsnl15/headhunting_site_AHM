@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useEffect } from 'react';
 import '../../../css/settings.css';
 import profile from '../imgrsr/profile.png'
 
@@ -6,61 +7,96 @@ export default function Settings({currUser}) {
 
 const [toggleActive, setToggleActive] = useState(false);
 const [id, setId] = useState(currUser.id);
-const [fname, setFname] = useState(currUser.firstname);
-const [lname, setLname] = useState(currUser.lastname);
-const [address, setAddress] = useState();
-
+const [email, setEmail] = useState(currUser.email);
+const [firstname, setFirstName] = useState(currUser.firstname);
+const [lastname, setLastName] = useState(currUser.lastname);
+const [password, setPassword] = useState(currUser.password);
+const [age, setAge] = useState(currUser.age);
+const [address, setAddress] = useState(currUser.address);
+const [position, setPosition] = useState(currUser.position);
 
 function toggle(){
     setToggleActive(!toggleActive);
-
     if (toggleActive){
         document.getElementById('fname').disabled = true;
         document.getElementById('lname').disabled = true;
         document.getElementById('age').disabled = true;
         document.getElementById('address').disabled = true;
+        document.getElementById('position').disabled = true;
+        document.getElementById('technology').disabled = true;
+        document.getElementById('btnAddTechnology').disabled = true;
     }
     else{
         document.getElementById('fname').disabled = false;
         document.getElementById('lname').disabled = false;
         document.getElementById('age').disabled = false;
         document.getElementById('address').disabled = false;
+        document.getElementById('position').disabled = false;
+        document.getElementById('technology').disabled = false;
+        document.getElementById('btnAddTechnology').disabled = false;
     }
 }
 
-function handleFname(e){
-    return setFname(e.target.value);
+
+function handleFirstname(e){
+    return setFirstName(e.target.value);
 }
-function handleLname(e){
-    return setLname(e.target.value);
+function handleLastName(e){
+    return setLastName(e.target.value);
+}
+function handleAge(e){
+    return setAge(e.target.value);
 }
 
 function handleAddress(e){
     return setAddress(e.target.value);
 }
-function disable(){
-    
-   
+
+function handlePosition(e){
+    return setPosition(e.target.value);
 }
+function handleSubmit(e){
+    e.preventDefault();
+
+    let users = JSON.parse(localStorage.getItem('users'));
+    let old_users =[...users].filter(user =>{return user.id !== id});
+
+    const data = {
+        id,
+        firstname,
+        email,
+        lastname,
+        password,
+        age,
+        address,
+        position
+    };
+    localStorage.setItem('CurrentUser', JSON.stringify(data));
+    localStorage.setItem('users', JSON.stringify([...old_users, data]));
+alert('Successfully Updated')
+toggle()
+}
+
   return (
-    <form action="" disabled className='settings'>
+    <form action="" disabled className='settings' onSubmit={handleSubmit}>
         <div className="container">
            <div className='settings-header p-2 row'>
                 <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
                     <div className='d-flex align-items-center'>
                         <label className='text-right'>Name :</label>
-                        <input disabled='true' className='fullname' id='fname' type="text" value={fname} onChange={handleFname} placeholder='First Name' />
-                        <input disabled='true' className='fullname' id='lname' type="text" value={lname}  onChange={handleLname} placeholder='Last Name' />
+                        <input disabled='true' className='fullname' id='fname' type="text" value={firstname} onChange={handleFirstname} placeholder='First Name' />
+                        <input disabled='true' className='fullname' id='lname' type="text" value={lastname}  onChange={handleLastName} placeholder='Last Name' />
                     </div>
                     <div className='d-flex align-items-center'>
                         <label>Age:</label> 
-                        <input disabled='true' id='age' type="number" value={'25'} />
+                        <input disabled='true' id='age' type="number" value={age} onChange={handleAge} />
                     </div>
                     <div className='d-flex align-items-center'>
                         <label>Address : </label>.
-                        <input disabled='true' id='address' type="text" value={'Agusan del Sur, Philippines'} />
+                        <input disabled='true' id='address' type="text" value={address} onChange={handleAddress} />
                     </div>
+                   
                 </div>
                 <div className='col-sm-4 d-flex justify-content-center align-items-center px-2 toggle'>
                     <div className='d-flex justify-content-start align-items-center' >
@@ -78,12 +114,12 @@ function disable(){
            <div className='settings-body'>
             <div className='row p-2'>
                     <h3 className='text-dark col-sm-2'>Position :</h3> 
-                    <input className='w-75 px-2 py-1 col-sm-10' type="text" />
+                    <input disabled='true' id='position' className='w-75 px-2 py-1 col-sm-10' value={position} onChange={handlePosition} type="text" />
             </div>
             <div className='row p-2'>
-                    <h4 className='text-dark col-sm-2'>Skills :</h4> 
-                    <input className='px-2 py-1 col-sm-6' type="text" />
-                    <input type="button" className='px-2 py-1 col-sm-2 mx-1 btn btn-info' value={'Add'} />
+                    <h4 className='text-dark col-sm-2'>Technology:</h4> 
+                    <input disabled='true' id='technology' className='px-2 py-1 col-sm-6' type="text" />
+                    <input disabled='true' type="button" id='btnAddTechnology' className='px-2 py-1 col-sm-1 mx-1 btn btn-info' value={'Add'} />
             </div>
             <div>
                     <table className='col-sm-8 bg-dark text-center offset-sm-2 striped'>
@@ -118,7 +154,7 @@ function disable(){
                     </table>
             </div>
             <div className='row p-2'>
-                    <input type="button" className='btn btn-primary' value={'Submit'} />
+                    <input type="submit" className='btn btn-primary' value={'Submit'} />
             </div>
             </div>
 
