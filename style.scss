@@ -19,14 +19,6 @@ $hover-text-color: rgba(179,
     text-align-last: left;
 }
 
-main {
-    width: 100vw;
-}
-
-#root {
-    width: 100vw;
-}
-
 p {
     text-align: justify;
     text-justify: distribute;
@@ -315,27 +307,32 @@ body {
 
      //BRANDS RULESET
     .sponsor-section {
-        height: auto;
         margin-top: 10vh;
         width: 100vw;
-        background: $text-color-1;
+        height: auto;
+        background: $primary-color;
         display: flex;
         flex-direction: column;
-        align-content: space-around;
-
+        gap: 20px;
+        
         h1 {
-            text-align: center;
+            align-self: center;
             padding-top: 50px;
-            color: $primary-color;
+            color: $secondary-color;
             font-weight: 700;
         }
-
+        
         .brands {
             display: flex;
-            justify-content: space-around;
-            padding: 100px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 20px;
+            padding: 50px 1rem;
+            background: $text-color-1;
+            gap: 30px;
 
             span img {
+                width: 40vw;
                 max-width: 250px;
             }
         }
