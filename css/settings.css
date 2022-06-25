@@ -94,10 +94,6 @@
   border-radius: 50%;
   background-color: #f8ec03;
   transform: translateX(0);
-  transition: 0.5s;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 

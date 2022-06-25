@@ -85,7 +85,8 @@ function Header() {
             </div>
             {isMobile()}
             
-            <div style={{width: '100vw', background: 'white', display: mobileMenuActive ? 'block' : 'none'}}>
+            <div className='toggledMenu' 
+            style={{width: '100vw', display: mobileMenuActive ? 'flex' : 'none'}}>
                 <a href="/#title1-mission">Our Mission</a>
                 <a href="/">Services</a>
                 <Link to='/developers'>Developers</Link>
