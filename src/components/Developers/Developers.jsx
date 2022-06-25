@@ -9,23 +9,24 @@ export default function Developers() {
               ? JSON.parse(userData)
               : [];
 
+  function renderDevCards() {
+    if (users.length > 0) {
+      users.map( user => {
+        return <DevCard 
+          name = {`${user.lastname}, ${user.firstname}`}
+        />
+      })
+    } else {
+      return <h1>No Results</h1>
+    }
+  }
+
   return (
     <main>
       <SearchBar />
-      <h1>Results</h1>
+      <h1>Developers</h1>
       <div className='dev-grid'>
-        {
-          users.map( user => {
-            return <DevCard 
-              name = {`${user.lastname}, ${user.firstname}`}
-            />
-          })
-        }
-        {/* <DevCard />
-        <DevCard />
-        <DevCard />
-        <DevCard />
-        <DevCard />   */}
+        {renderDevCards()}
       </div>
     </main>
   )
