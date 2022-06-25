@@ -176,7 +176,7 @@ body {
 
 .our-mission .our-mission-text h1 {
   margin-bottom: 30px;
-  width: 90%;
+  width: 75%;
 }
 
 .our-mission .our-mission-text #title1-mission {
@@ -186,6 +186,7 @@ body {
 
 .our-mission .our-mission-text #title2-mission {
   font-weight: 700;
+  padding: 0 auto;
 }
 
 .our-mission .our-mission-text p {
