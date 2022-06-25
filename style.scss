@@ -289,7 +289,6 @@ body {
 
         img {
             width: 50vw;
-            min-width: 75%;
             max-width: 500px;
             border-radius: 100px;
         }
@@ -306,9 +305,8 @@ body {
             padding: 2rem auto;
             
             img {
-                width: 50vw;
-                min-width: 75%;
-                max-width: 500px;
+                width: 40vw;
+                max-width: 300px;
                 border-radius: 100px;
             }
             
@@ -397,6 +395,7 @@ body {
 
             img {
                 margin: 0 auto;
+                min-width: 75%;
             }
         }
         .our-services-fig-2 {
@@ -408,6 +407,7 @@ body {
 
             img {
                 margin: 0 auto;
+                min-width: 65%;
             }
         }
     }

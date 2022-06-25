@@ -300,7 +300,6 @@ body {
 
 .our-services .our-services-fig-1 img {
   width: 50vw;
-  min-width: 75%;
   max-width: 500px;
   border-radius: 100px;
 }
@@ -316,9 +315,8 @@ body {
 }
 
 .our-services .our-services-fig-2 img {
-  width: 50vw;
-  min-width: 75%;
-  max-width: 500px;
+  width: 40vw;
+  max-width: 300px;
   border-radius: 100px;
 }
 
@@ -403,6 +401,7 @@ body {
   }
   .our-services .our-services-fig-1 img {
     margin: 0 auto;
+    min-width: 75%;
   }
   .our-services .our-services-fig-2 {
     flex-direction: column;
@@ -413,6 +412,7 @@ body {
   }
   .our-services .our-services-fig-2 img {
     margin: 0 auto;
+    min-width: 65%;
   }
 }
 
