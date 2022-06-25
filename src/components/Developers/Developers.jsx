@@ -17,7 +17,7 @@ export default function Developers() {
         />
       })
     } else {
-      return <h1>No Results</h1>
+      return <h2>No Results</h2>
     }
   }
 
