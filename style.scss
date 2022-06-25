@@ -14,6 +14,13 @@ $hover-text-color: rgba(179,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    text-justify: distribute;
+    word-spacing: -2px;
+    text-align-last: left;
+}
+
+main {
+    width: 100vw;
 }
 
 #root {
@@ -147,16 +154,13 @@ body {
 // MISSION RULESET
 .our-mission {
     display: flex;
-    justify-content: center;
-    width: 100vw;
-    padding: 0 1rem;
-    gap: 30px;
+    justify-content: space-evenly;
 
     figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         min-width: 50vw;
-        height: max-content;
-        display: grid;
-        place-items: center;
 
         svg {
             width: 80%;
@@ -166,6 +170,7 @@ body {
     .our-mission-text {
         line-height: 2;
         min-width: 50vw;
+        min-height: max-content;
         display: grid;
         place-content: center;
 
@@ -191,7 +196,7 @@ body {
 .mission-cards {
     display: flex;
     width: 100vw;
-    height: 60vh;
+    min-height: max-content;
     justify-content: center;
     padding: 1rem 4rem;
     margin-top: 10vh;
@@ -365,14 +370,24 @@ body {
     .our-mission {
         flex-direction: column-reverse;
     }
+    .mission-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+    }
     .our-mission-text {
         width: 100vw;
-        padding: 1rem;
+        margin: 0 auto;
+        padding: 0;
         display: grid;
         place-items: center;
 
-        p {
-            font-size: 1rem;
+        h1 {
+            font-size: 5vw;
+            width: max-content;
         }
     }
 }
@@ -381,5 +396,8 @@ body {
         h1 {
             padding: 0rem;
         }
+    }
+    .main-banner-section-2 div svg {
+        display: none;
     }
 }

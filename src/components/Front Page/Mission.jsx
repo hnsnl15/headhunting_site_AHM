@@ -3,7 +3,7 @@ import SolutionSvg from '../imgrsr/SolutionSvg';
 
 function Mission() {
   return (
-    <>
+    <section className='mission-section'>
       <section className='our-mission'>
         <figure className='our-mission-figure-1'>
             <SolutionSvg />
@@ -54,7 +54,7 @@ function Mission() {
         </div>
   
       </section>
-    </>
+    </section>
   )
 }
 
