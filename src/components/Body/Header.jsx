@@ -37,7 +37,7 @@ function Header() {
              return <li><img src={profile} alt="Profile" onClick={toggleDropdown} />
                 <motion.div 
                 style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown"
-                transition={{type:'spring', stiffness: 100}} >
+                >
                     <h6>{name()}</h6>
                     <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
                     <a onClick={logout} href="#">Logout</a>
@@ -48,6 +48,7 @@ function Header() {
 
     function toggleMobileMenu() {
         setMobileMenuActive(!mobileMenuActive);
+        isToggle()
         // if (mobileMenuActive) {
         //     return <div style={{width: '100vw', background: 'white'}}>
         //         <a href="/#title1-mission">Our Mission</a>
@@ -58,6 +59,11 @@ function Header() {
         // } else {
         //     return null;
         // }
+    }
+
+    const [ on, setOn ] = useState(false);
+    function isToggle() {
+        setOn(prev => !prev)
     }
 
     function isMobile() {
@@ -79,7 +85,6 @@ function Header() {
             </div>
         }
     }
-    
 
     return (
         <header className='header-nav'>
@@ -88,13 +93,17 @@ function Header() {
             </div>
             {isMobile()}
             
-            <div className='toggledMenu' 
-            style={{width: '100vw', display: mobileMenuActive ? 'flex' : 'none'}}>
+            <motion.div className='toggledMenu' 
+            style={{width: '100vw', 
+            display: mobileMenuActive ? 'flex' : 'none'}}
+            animate={{ y: on ? [-100, 1000, 0] : [0, 0, 0] }}
+            transition={{ type: "spring", stiffness: 100 }}
+            >
                 <a href="/#title1-mission">Our Mission</a>
                 <a href="/">Services</a>
                 <Link to='/developers'>Developers</Link>
                 <Link to="/contact">Contact</Link>
-            </div>
+            </motion.div>
         </header>
     )
 }
