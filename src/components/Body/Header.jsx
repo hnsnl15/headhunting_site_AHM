@@ -30,6 +30,7 @@ function Header() {
     }
     
     function isLoggedIn() {
+        console.log(currentUser)
         if ( !currentUser ) {
             return <li><Link to='/login'>Login</Link></li>                        
         } else {
