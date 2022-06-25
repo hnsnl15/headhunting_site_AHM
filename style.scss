@@ -125,7 +125,7 @@ body {
             font-weight: 600;
             line-height: 1.5;
             width: max-content;
-            transform: translateX(50px);
+            transform: translateX(100px);
         }
     }
     .main-banner-section-2 {
@@ -150,6 +150,7 @@ body {
     justify-content: center;
     width: 100vw;
     padding: 0 1rem;
+    gap: 30px;
 
     figure {
         min-width: 50vw;
