@@ -1,30 +1,76 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../../css/settings.css';
 import profile from '../imgrsr/profile.png'
 
-export default function Settings() {
+export default function Settings({currUser}) {
+
+const [toggleActive, setToggleActive] = useState(false);
+const [id, setId] = useState(currUser.id);
+const [fname, setFname] = useState(currUser.firstname);
+const [lname, setLname] = useState(currUser.lastname);
+const [address, setAddress] = useState();
 
 
+function toggle(){
+    setToggleActive(!toggleActive);
+
+    if (toggleActive){
+        document.getElementById('fname').disabled = true;
+        document.getElementById('lname').disabled = true;
+        document.getElementById('age').disabled = true;
+        document.getElementById('address').disabled = true;
+    }
+    else{
+        document.getElementById('fname').disabled = false;
+        document.getElementById('lname').disabled = false;
+        document.getElementById('age').disabled = false;
+        document.getElementById('address').disabled = false;
+    }
+}
+
+function handleFname(e){
+    return setFname(e.target.value);
+}
+function handleLname(e){
+    return setLname(e.target.value);
+}
+
+function handleAddress(e){
+    return setAddress(e.target.value);
+}
+function disable(){
+    
+   
+}
   return (
-    <form action="" className='settings py-1'>
+    <form action="" disabled className='settings'>
         <div className="container">
-           
            <div className='settings-header p-2 row'>
-            
                 <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
-                    <div>
-                        <label className='text-right'>Name : </label><input type="text" value={'Adonis'} />
+                    <div className='d-flex align-items-center'>
+                        <label className='text-right'>Name :</label>
+                        <input disabled='true' className='fullname' id='fname' type="text" value={fname} onChange={handleFname} placeholder='First Name' />
+                        <input disabled='true' className='fullname' id='lname' type="text" value={lname}  onChange={handleLname} placeholder='Last Name' />
                     </div>
-                    <div>
-                        <label>Age:</label> <input type="text" value={'25'} />
+                    <div className='d-flex align-items-center'>
+                        <label>Age:</label> 
+                        <input disabled='true' id='age' type="number" value={'25'} />
                     </div>
-                    <div>
-                        <label>Address : </label><input type="text" value={'Agusan del Sur, Philippines'} />
+                    <div className='d-flex align-items-center'>
+                        <label>Address : </label>.
+                        <input disabled='true' id='address' type="text" value={'Agusan del Sur, Philippines'} />
                     </div>
                 </div>
-                <div className='col-sm-4 d-flex justify-content-center align-items-center px-2'>
-                    <h4>Profile Settings</h4>
+                <div className='col-sm-4 d-flex justify-content-center align-items-center px-2 toggle'>
+                    <div className='d-flex justify-content-start align-items-center' >
+                        <label htmlFor="" className='text-dark px-2'>Edit</label>
+                            <a className='toggleButton' onClick={toggle}><span className='ms-2 me-1'>ON</span><span>OFF</span>
+                                <span style={{transform: toggleActive ? 'translate(100%)' : 'translate(0)',
+                                background: toggleActive ? '#f8ec03' : 'white'    }} className='spanToggle'></span>
+                            </a>
+                    </div>
+                   <h4>Profile Settings</h4>
                 </div>
            </div>
 
@@ -77,6 +123,6 @@ export default function Settings() {
             </div>
 
         </div>
-        </form>
+    </form>
   )
 }

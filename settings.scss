@@ -13,6 +13,14 @@ $hover-text-color: rgba(179,
     padding: 0;
 }
 
+.settings-editToggle {
+    background-color: white;
+    display: flex;
+    width: 70vw;
+    justify-content: end;
+    color: black;
+}
+
 .settings {
     width: 100vw;
     min-height: 80vh;
@@ -32,21 +40,58 @@ $hover-text-color: rgba(179,
                 div {
                     display: flex;
                     justify-content: space-between;
+                    border-bottom: 1px solid black;
                     label {
                         color: black;
                     }
                     input {
                         padding: 5px;
                         width: 80%;
+                        border: none;
+                        outline: none;
+                        font-weight: bold;
+                    }
+                    input.fullname {
+                        width: 40%;
                     }
                 }
             }
-            div {
+            .toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
                 h4 {
                     color: black;
                     border: 1px solid gray;
                     padding: 10px;
                     border-radius: 10px
+                }
+                .toggleButton {
+                    width: 60px;
+                    height: 30px;
+                    background-color: $primary-color;
+                    border-radius: 5rem;
+                    display: flex;
+                    align-items: center;
+                    padding: 1px;
+                    border: 1px solid $primary-color;
+                    cursor: pointer;
+                    text-decoration: none;
+                    font-size: 11px;
+                    color: $text-color-1;
+                    .spanToggle {
+                        position: absolute;
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 50%;
+                        background-color: #f8ec03;
+                        transform: translateX(0);
+                        transition: 0.5s;
+                    }
+                }
+                .editText {
+                    transform: translateY(-20px);
+                    color: black;
                 }
             }
         }
