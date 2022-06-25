@@ -313,9 +313,9 @@ body {
 }
 
 .sponsor-section {
-  margin-top: 10vh;
-  width: 100vw;
-  height: auto;
+  width: 96vw;
+  margin: 10vh auto;
+  height: max-content;
   background: #1B2430;
   display: flex;
   flex-direction: column;
@@ -333,15 +333,76 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 20px;
   padding: 50px 1rem;
+  border-radius: 20px;
   background: #FFF;
-  gap: 30px;
+  gap: 40px;
 }
 
 .sponsor-section .brands span img {
   width: 40vw;
   max-width: 250px;
+}
+
+.footer-navigation {
+  background: #000000;
+  height: 50vh;
+  display: flex;
+}
+
+.footer-navigation div {
+  flex: 1;
+}
+
+.footer-navigation div p {
+  word-spacing: 0;
+}
+
+.footer-navigation .footer-logo-container {
+  display: grid;
+  place-content: center;
+}
+
+.footer-navigation .footer-logo-container #footer-logo {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-navigation .footer-contact-container {
+  display: grid;
+  place-content: center;
+  padding: 4rem;
+}
+
+.footer-navigation .footer-contact-container form {
+  display: flex;
+  margin: 0;
+  gap: 10px;
+}
+
+.footer-navigation .footer-contact-container form input {
+  width: 210px;
+  border: transparent 2px solid;
+}
+
+.footer-navigation .footer-contact-container form button {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  width: 120px;
+  border-radius: 10px;
+  background: #D6D5A8;
+  border: transparent solid 2px;
+  transition: all 200ms ease-in-out;
+}
+
+.footer-navigation .footer-contact-container form button:hover {
+  background: rgba(43, 93, 146, 0.4);
+  color: #fff;
+}
+
+.footer-navigation .footer-social-container {
+  background: lightblue;
 }
 
 @media screen and (max-width: 776px) {

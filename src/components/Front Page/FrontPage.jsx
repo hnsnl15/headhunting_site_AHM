@@ -3,6 +3,7 @@ import MainPageBanner from './MainPageBanner';
 import Mission from './Mission';
 import OurServices from './OurServices';
 import Brands from './Brands';
+import Footer from './Footer';
 
 function FrontPage() {
   return (
@@ -11,6 +12,7 @@ function FrontPage() {
     <Mission/>
     <OurServices/>
     <Brands/>
+    <Footer/>
     </>
   )
 }

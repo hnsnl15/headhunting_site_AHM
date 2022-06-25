@@ -2,7 +2,7 @@ import React from "react";
 
 function Brands() {
   return (
-    <section className="sponsor-section">
+    <div className="sponsor-section">
       <h1>THEY TRUST US</h1>
 
       <div className="brands">
@@ -31,7 +31,7 @@ function Brands() {
             />
         </span>
       </div>
-    </section>
+    </div>
   );
 }
 
