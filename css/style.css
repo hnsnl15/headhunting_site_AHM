@@ -430,6 +430,16 @@ body {
   justify-content: space-between;
 }
 
+.footer-navigation .footer-social-container .social-logos span a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+.footer-navigation .footer-social-container .social-logos span a:hover {
+  transform: scale(1.1);
+}
+
 .footer-navigation .footer-social-container .social-logos span i {
   font-size: 25px;
 }

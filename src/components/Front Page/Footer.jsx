@@ -23,9 +23,15 @@ function Footer() {
            <div className='social-logos'>
                 <h4>FOLLOW US</h4>
                 <span>
-                    <i class="fa-brands fa-instagram" id='ig'></i>
-                    <i class="fa-brands fa-facebook" id='fb'></i>
-                    <i class="fa-brands fa-twitter-square" id='twitter'></i>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram" id='ig'></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook" id='fb'></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter-square" id='twitter'></i>
+                    </a>
                 </span>
            </div>
 

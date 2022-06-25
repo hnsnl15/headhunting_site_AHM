@@ -412,6 +412,14 @@ body {
             span {
                 display: flex;
                 justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all 200ms ease-in-out;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
                 i {
                     font-size: 25px;
                 }
