@@ -341,9 +341,12 @@ body {
 
 // FOOTER RULESET
 .footer-navigation {
-    background: #000000;
-    height: 50vh;
+    background: #000;
+    width: 100vw;
+    height: 60vh;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     
     div {
         flex: 1;
@@ -383,6 +386,9 @@ body {
                 background: $secondary-color;
                 border: transparent solid 2px;
                 transition: all 200ms ease-in-out;
+                span {
+                    font-size: 94%;
+                }
                 &:hover {
                     background: rgba(43, 93, 146, 0.4);
                     color: #fff;
@@ -392,7 +398,35 @@ body {
     }
 
     .footer-social-container {
-        background: lightblue;
+        border-left: $secondary-color 2px solid;
+        display: flex;
+        flex-wrap: wrap;
+        div {
+            min-width: 50%;
+            display: grid;
+            place-content: center;
+            h4 {
+                color: $secondary-color;
+            }
+        }
+        .social-logos {
+            display: grid;
+            gap: 10px;
+            span {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+        .company-contact-info {
+            display: grid;
+            gap: 2px;
+            p {
+                font-size: 15px;
+            }
+        }
     }
 } 
 
@@ -472,6 +506,31 @@ body {
             img {
                 margin: 0 auto;
                 min-width: 65%;
+            }
+        }
+    }
+    .footer-navigation {
+        flex-direction: column;
+        height: 80vh;
+        .footer-logo-container {
+            place-items: center;
+        }
+        .footer-contact-container {
+            gap: 10px;
+            p { 
+                width: 100%;
+                padding: 0 auto;
+                margin: 0 auto;
+                transform: scale(.9);
+            }
+            form {
+                width: 100%;
+                input {
+                    width: 75%;
+                }
+                button {
+                    width: 20%; 
+                }
             }
         }
     }

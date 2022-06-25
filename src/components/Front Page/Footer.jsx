@@ -20,7 +20,19 @@ function Footer() {
         </div>
 
         <div className='footer-social-container'>
-           
+           <div className='social-logos'>
+                <h4>FOLLOW US</h4>
+                <span>
+                    <i class="fa-brands fa-instagram" id='ig'></i>
+                    <i class="fa-brands fa-facebook" id='fb'></i>
+                    <i class="fa-brands fa-twitter-square" id='twitter'></i>
+                </span>
+           </div>
+
+           <div className='company-contact-info'>
+                <h4>CALL US</h4>
+                <p>+123-5678-0956</p>
+           </div>
         </div>
     </footer>
   )
