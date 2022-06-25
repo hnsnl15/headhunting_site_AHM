@@ -19,14 +19,6 @@ $hover-text-color: rgba(179,
     text-align-last: left;
 }
 
-main {
-    width: 100vw;
-}
-
-#root {
-    width: 100vw;
-}
-
 p {
     text-align: justify;
     text-justify: distribute;
@@ -289,7 +281,6 @@ body {
 
         img {
             width: 50vw;
-            min-width: 75%;
             max-width: 500px;
             border-radius: 100px;
         }
@@ -306,9 +297,8 @@ body {
             padding: 2rem auto;
             
             img {
-                width: 50vw;
-                min-width: 75%;
-                max-width: 500px;
+                width: 40vw;
+                max-width: 300px;
                 border-radius: 100px;
             }
             
@@ -317,31 +307,103 @@ body {
 
      //BRANDS RULESET
     .sponsor-section {
-        height: auto;
-        margin-top: 10vh;
-        width: 100vw;
-        background: $text-color-1;
+        width: 96vw;
+        margin: 10vh auto;
+        height: max-content;
+        background: $primary-color;
         display: flex;
         flex-direction: column;
-        align-content: space-around;
-
+        gap: 20px;
+        
         h1 {
-            text-align: center;
+            align-self: center;
             padding-top: 50px;
-            color: $primary-color;
+            color: $secondary-color;
             font-weight: 700;
         }
-
+        
         .brands {
             display: flex;
-            justify-content: space-around;
-            padding: 100px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 1rem;
+            border-radius: 20px;
+            background: $text-color-1;
+            gap: 40px;
 
             span img {
+                width: 40vw;
                 max-width: 250px;
             }
         }
     }
+
+
+// FOOTER RULESET
+.footer-navigation {
+    background: #000000;
+    height: 50vh;
+    display: flex;
+    
+    div {
+        flex: 1;
+        p {
+            word-spacing: 0;    
+        }
+    }
+
+    .footer-logo-container {
+        display: grid;
+        place-content: center;
+        #footer-logo {
+            text-decoration: none;
+            color: $text-color-1;
+        }
+    }
+
+    .footer-contact-container {
+        display: grid;
+        place-content: center;
+        padding: 4rem;
+
+        form {
+            display: flex;
+            margin: 0;
+            gap: 10px;
+            input {
+                width: 210px;
+                border: transparent 2px solid;
+            }
+            button {
+                display: flex;
+                justify-content: center;
+                padding: .5rem;
+                width: 120px;
+                border-radius: 10px;
+                background: $secondary-color;
+                border: transparent solid 2px;
+                transition: all 200ms ease-in-out;
+                &:hover {
+                    background: rgba(43, 93, 146, 0.4);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .footer-social-container {
+        background: lightblue;
+    }
+} 
+
+
+
+
+
+
+
+
+
 
 // MEDIA QUERY
 @media screen and (max-width:776px) {
@@ -397,6 +459,7 @@ body {
 
             img {
                 margin: 0 auto;
+                min-width: 75%;
             }
         }
         .our-services-fig-2 {
@@ -408,6 +471,7 @@ body {
 
             img {
                 margin: 0 auto;
+                min-width: 65%;
             }
         }
     }

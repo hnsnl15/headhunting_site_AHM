@@ -11,14 +11,6 @@
   text-align-last: left;
 }
 
-main {
-  width: 100vw;
-}
-
-#root {
-  width: 100vw;
-}
-
 p {
   text-align: justify;
   text-justify: distribute;
@@ -300,7 +292,6 @@ body {
 
 .our-services .our-services-fig-1 img {
   width: 50vw;
-  min-width: 75%;
   max-width: 500px;
   border-radius: 100px;
 }
@@ -316,37 +307,102 @@ body {
 }
 
 .our-services .our-services-fig-2 img {
-  width: 50vw;
-  min-width: 75%;
-  max-width: 500px;
+  width: 40vw;
+  max-width: 300px;
   border-radius: 100px;
 }
 
 .sponsor-section {
-  height: auto;
-  margin-top: 10vh;
-  width: 100vw;
-  background: #FFF;
+  width: 96vw;
+  margin: 10vh auto;
+  height: max-content;
+  background: #1B2430;
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  gap: 20px;
 }
 
 .sponsor-section h1 {
-  text-align: center;
+  align-self: center;
   padding-top: 50px;
-  color: #1B2430;
+  color: #D6D5A8;
   font-weight: 700;
 }
 
 .sponsor-section .brands {
   display: flex;
-  justify-content: space-around;
-  padding: 100px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 1rem;
+  border-radius: 20px;
+  background: #FFF;
+  gap: 40px;
 }
 
 .sponsor-section .brands span img {
+  width: 40vw;
   max-width: 250px;
+}
+
+.footer-navigation {
+  background: #000000;
+  height: 50vh;
+  display: flex;
+}
+
+.footer-navigation div {
+  flex: 1;
+}
+
+.footer-navigation div p {
+  word-spacing: 0;
+}
+
+.footer-navigation .footer-logo-container {
+  display: grid;
+  place-content: center;
+}
+
+.footer-navigation .footer-logo-container #footer-logo {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-navigation .footer-contact-container {
+  display: grid;
+  place-content: center;
+  padding: 4rem;
+}
+
+.footer-navigation .footer-contact-container form {
+  display: flex;
+  margin: 0;
+  gap: 10px;
+}
+
+.footer-navigation .footer-contact-container form input {
+  width: 210px;
+  border: transparent 2px solid;
+}
+
+.footer-navigation .footer-contact-container form button {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  width: 120px;
+  border-radius: 10px;
+  background: #D6D5A8;
+  border: transparent solid 2px;
+  transition: all 200ms ease-in-out;
+}
+
+.footer-navigation .footer-contact-container form button:hover {
+  background: rgba(43, 93, 146, 0.4);
+  color: #fff;
+}
+
+.footer-navigation .footer-social-container {
+  background: lightblue;
 }
 
 @media screen and (max-width: 776px) {
@@ -403,6 +459,7 @@ body {
   }
   .our-services .our-services-fig-1 img {
     margin: 0 auto;
+    min-width: 75%;
   }
   .our-services .our-services-fig-2 {
     flex-direction: column;
@@ -413,6 +470,7 @@ body {
   }
   .our-services .our-services-fig-2 img {
     margin: 0 auto;
+    min-width: 65%;
   }
 }
 

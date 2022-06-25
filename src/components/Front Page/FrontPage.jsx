@@ -2,7 +2,8 @@ import React from 'react'
 import MainPageBanner from './MainPageBanner';
 import Mission from './Mission';
 import OurServices from './OurServices';
-/* import Brands from './Brands'; */
+import Brands from './Brands';
+import Footer from './Footer';
 
 function FrontPage() {
   return (
@@ -10,6 +11,8 @@ function FrontPage() {
     <MainPageBanner/>
     <Mission/>
     <OurServices/>
+    <Brands/>
+    <Footer/>
     </>
   )
 }
