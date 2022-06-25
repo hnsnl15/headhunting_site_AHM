@@ -478,6 +478,7 @@ body {
 
 .toggledMenu a {
   text-decoration: none;
+  z-index: 101;
   color: #1B2430;
   font-weight: 500;
 }
