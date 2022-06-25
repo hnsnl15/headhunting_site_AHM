@@ -521,15 +521,12 @@ body {
     word-wrap: break-word;
     padding: 0;
     margin: 0 auto;
-<<<<<<< HEAD
     transform: translateX(-10px), scale(0.85);
-=======
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
   }
   .our-mission-text p, .our-mission-text h1 {
     transform: scale(0.85);
->>>>>>> eba8aa02190c82962f15e6b5bc77c610ea32c0b4
   }
 }
 
