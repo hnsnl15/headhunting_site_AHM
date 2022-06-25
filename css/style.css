@@ -455,7 +455,9 @@ body {
 
 .toggledMenu {
   justify-content: space-evenly;
+  height: max-content;
   align-items: center;
+  flex-wrap: wrap;
   transition: all 250ms ease-in-out;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.7);
