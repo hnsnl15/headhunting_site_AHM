@@ -33,7 +33,7 @@ export default function Login() {
       return null;
     }
 
-    localStorage.setItem('CurrentUser', JSON.stringify(validUser))
+    localStorage.setItem('CurrentUser', JSON.stringify(validUser[0]))
     window.location = '/';
   }
 

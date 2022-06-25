@@ -11,7 +11,7 @@ function Header() {
     const [currentUser, setCurrentUser] = useState( userData ? JSON.parse(userData) : null);
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
-    const name = (user) => <h6>{`${user['firstname']} ${user['lastname']}`}</h6>
+    const name = () => { return `${currentUser.firstname} ${currentUser.lastname}`}
 
     function toggleDropdown() {
         setDropdownActive(!dropdownActive);
@@ -35,7 +35,7 @@ function Header() {
         } else {
              return <li><img src={profile} alt="Profile" onClick={toggleDropdown} />
                 <div style={{display: dropdownActive ? 'flex' : 'none' }} className="profile-dropdown">
-                    <h6>{name(currentUser)}</h6>
+                    <h6>{name()}</h6>
                     <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
                     <a onClick={logout} href="#">Logout</a>
                 </div>
