@@ -9,6 +9,7 @@ function Header() {
     const [dropdownActive, setDropdownActive] = useState(false);
     let userData = localStorage.getItem('CurrentUser');
     const [currentUser, setCurrentUser] = useState( userData ? JSON.parse(userData) : null);
+    console.log(currentUser);
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
     const name = (user) => <h6>{`${user.firstname} ${user.lastname}`}</h6>
