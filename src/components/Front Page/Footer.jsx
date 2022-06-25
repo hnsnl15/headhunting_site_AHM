@@ -6,7 +6,7 @@ function Footer() {
 
         <div className='footer-logo-container'>
             <a href="#" id='footer-logo'>
-                <h1>KodeKo</h1>
+                <h1>Kode<span className='ko'>Ko</span></h1>
             </a>
             <p>Your best partner with your scaling.</p>
         </div>

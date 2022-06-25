@@ -486,6 +486,10 @@ body {
   color: #D6D5A8;
 }
 
+.ko {
+  color: #D6D5A8;
+}
+
 @media screen and (max-width: 776px) {
   .main-banner {
     flex-direction: column;
