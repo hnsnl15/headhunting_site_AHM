@@ -374,6 +374,11 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+  .mission-section {
+    padding: 0;
+    margin: 0 auto;
+    width: 100vw;
+  }
   .our-mission {
     flex-direction: column-reverse;
   }
@@ -386,15 +391,16 @@ body {
     margin: 0 auto;
   }
   .our-mission-text {
-    width: 100vw;
     margin: 0 auto;
     padding: 0;
     display: grid;
     place-items: center;
   }
   .our-mission-text h1 {
-    font-size: 5vw;
-    width: max-content;
+    font-size: 6.2vw;
+    padding: 0;
+    margin: 0 auto;
+    transform: translateX(-10px);
   }
 }
 
@@ -402,6 +408,7 @@ body {
   .main-banner-section-1 h1 {
     padding: 0rem;
   }
+  .main-banner-section-2,
   .main-banner-section-2 div svg {
     display: none;
   }
