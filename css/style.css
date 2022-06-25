@@ -462,14 +462,13 @@ body {
   gap: 20px;
   flex-direction: column;
   margin: 0 auto;
-  transform-origin: right;
-  padding: 1rem;
+  padding: 2rem;
   position: absolute;
   top: 60px;
   right: 0;
   left: 0;
   height: max-content;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
   transition: all 250ms ease-in-out;
   border-radius: 10px;

@@ -94,10 +94,12 @@ function Header() {
             {isMobile()}
             
             <motion.div className='toggledMenu' 
-            style={{width: '100vw', 
-            display: mobileMenuActive ? 'flex' : 'none'}}
-            animate={{ y: on ? [-100, 1000, 0] : [0, 0, 0] }}
-            transition={{ type: "spring", stiffness: 100 }}
+            style={{
+                width: '100vw', 
+                originY: 0,
+                display: mobileMenuActive ? 'flex' : 'none'}}
+                animate={{ scale: on ? 1 : 0 }}
+                transition={{ ease: 'easeOut' }}
             >
                 <a href="/#title1-mission">Our Mission</a>
                 <a href="/">Services</a>
