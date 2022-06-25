@@ -372,6 +372,9 @@ body {
         margin: 0 auto;
         width: 100vw; 
     }
+    p {
+        transform: scale(.85);
+    }
     .our-mission {
         flex-direction: column-reverse;
     }
@@ -388,16 +391,13 @@ body {
         padding: 0;
         display: grid;
         place-items: center;
-
+        
         h1 {
             font-size: 7.5vw;
             word-wrap: break-word;
             padding: 0;
             margin: 0 auto;
-            transform: translateX(-10px);
-        }
-        p, h1 {
-            transform: scale(.85);
+            transform: translateX(-10px), scale(.85);
         }
     }
 }

@@ -379,6 +379,9 @@ body {
     margin: 0 auto;
     width: 100vw;
   }
+  p {
+    transform: scale(0.85);
+  }
   .our-mission {
     flex-direction: column-reverse;
   }
@@ -401,10 +404,7 @@ body {
     word-wrap: break-word;
     padding: 0;
     margin: 0 auto;
-    transform: translateX(-10px);
-  }
-  .our-mission-text p, .our-mission-text h1 {
-    transform: scale(0.85);
+    transform: translateX(-10px), scale(0.85);
   }
 }
 
