@@ -13,6 +13,7 @@ import Register from './components/Auth/Register';
 import FrontPage from './components/Front Page/FrontPage';
 import Settings from './components/SettingsFolder/Settings';
 import Developers from './components/Developers/Developers';
+import Admin from './components/Admin/Admin';
 
 function App() {
   let currUserLocal = localStorage.getItem('CurrentUser');
@@ -44,6 +45,7 @@ function App() {
           />
         } />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
     </main>
   </Router>
