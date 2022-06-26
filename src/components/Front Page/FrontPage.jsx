@@ -10,8 +10,12 @@ function FrontPage() {
     <>
     <MainPageBanner/>
     <hr/>
+    <br/>
+    <br/>
     <Mission/>
     <hr/>
+    <br/>
+    <br/>
     <OurServices/>
     <br/>
     <br/>
@@ -21,6 +25,7 @@ function FrontPage() {
     <hr/>
     <Brands/>
     <hr/>
+    <br/>
     <Footer/>
     </>
   )
