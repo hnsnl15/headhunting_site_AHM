@@ -19,7 +19,7 @@ export default function Developers() {
       return users.map( user => {
         // if (user.id === currUser[0].id) return null;
         return <DevCard 
-          name = {`${user.lastname}, ${user.firstname}`}
+          user = {user}
         />
       })
     } else {
