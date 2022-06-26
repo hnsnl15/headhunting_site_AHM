@@ -9,9 +9,18 @@ function FrontPage() {
   return (
     <>
     <MainPageBanner/>
+    <hr/>
     <Mission/>
+    <hr/>
     <OurServices/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <hr/>
     <Brands/>
+    <hr/>
     <Footer/>
     </>
   )
