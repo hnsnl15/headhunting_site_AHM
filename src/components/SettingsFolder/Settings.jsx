@@ -15,6 +15,8 @@ const [age, setAge] = useState(currUser.age);
 const [address, setAddress] = useState(currUser.address);
 const [position, setPosition] = useState(currUser.position);
 const [languages, setLanguages] = useState(currUser.languages);
+const [bio, setBio] = useState(currUser.bio);
+
 
 function toggle(){
     setToggleActive(!toggleActive);
@@ -24,9 +26,8 @@ function toggle(){
         document.getElementById('age').disabled = true;
         document.getElementById('address').disabled = true;
         document.getElementById('position').disabled = true;
-        document.getElementById('technology').disabled = true;
-        document.getElementById('btnAddTechnology').disabled = true;
         document.getElementById('btnSubmit').disabled = true;
+        document.getElementById('bio').disabled = true;
     }
     else{
         document.getElementById('fname').disabled = false;
@@ -34,9 +35,8 @@ function toggle(){
         document.getElementById('age').disabled = false;
         document.getElementById('address').disabled = false;
         document.getElementById('position').disabled = false;
-        document.getElementById('technology').disabled = false;
-        document.getElementById('btnAddTechnology').disabled = false;
         document.getElementById('btnSubmit').disabled = false;
+        document.getElementById('bio').disabled = false;
     }
 }
 
@@ -58,6 +58,10 @@ function handleAddress(e){
 function handlePosition(e){
     return setPosition(e.target.value);
 }
+function handleBio(e){
+    return setBio(e.target.value);
+}
+
 function handleSubmit(e){
     e.preventDefault();
 
@@ -72,6 +76,7 @@ function handleSubmit(e){
             password,
             age,
             address,
+            bio,
             languages,
             position
         };
@@ -100,7 +105,6 @@ function handleSubmit(e){
                         <label>Address : </label>.
                         <input disabled='true' id='address' type="text" value={address} onChange={handleAddress} />
                     </div>
-                   
                 </div>
                 <div className='col-sm-4 d-flex justify-content-center align-items-center px-2 toggle'>
                     <div className='d-flex justify-content-start align-items-center' >
@@ -116,46 +120,14 @@ function handleSubmit(e){
 
            <div className='settings-body'>
             <div className='row p-2'>
+                    <h3 className='text-dark col-sm-2'>Bio :</h3> 
+                    <input disabled='true' id='bio' className='w-sm-75 px-2 py-1 col-sm-10' value={bio} onChange={handleBio} type="text" />
+            </div>
+            <div className='row p-2'>
                     <h3 className='text-dark col-sm-2'>Position :</h3> 
                     <input disabled='true' id='position' className='w-sm-75 px-2 py-1 col-sm-10' value={position} onChange={handlePosition} type="text" />
             </div>
 
-            <div className='row p-2'>
-                    <h4 className='text-dark col-sm-2'>Technology:</h4> 
-                    <input disabled='true' id='technology' className='px-2 py-1 col-sm-6' type="text" />
-                    <input disabled='true' type="button" id='btnAddTechnology' className='px-2 py-1 col-sm-1 mx-1 btn btn-info' value={'Add'} />
-            </div>
-            <div>
-                <table className='col-sm-8 bg-dark text-center offset-sm-2 striped'>
-                        <thead >
-                            <tr>
-                                <td className='text-light p-2'><h5>Skills</h5></td>
-                            </tr>
-                        </thead>
-                        <tbody className='bg-white'>
-                            <tr>
-                                <td className='text-dark p-1'>HTML</td>
-                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
-                            </tr>
-                            <tr>
-                                <td className='text-dark p-2'>CSS</td>
-                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
-                            </tr>
-                            <tr>
-                                <td className='text-dark p-2'>Java Script</td>
-                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
-                            </tr>
-                            <tr>
-                                <td className='text-dark p-2'>Its A trap</td>
-                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
-                            </tr>
-                            <tr>
-                                <td className='text-dark p-2'>React JS</td>
-                                <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
-                            </tr>
-                        </tbody>
-                </table>
-            </div>
             <div className='row p-2'>
                     <input id='btnSubmit' disabled='true' type="submit" className='btn btn-primary w-100' value={'Submit'} />
             </div>

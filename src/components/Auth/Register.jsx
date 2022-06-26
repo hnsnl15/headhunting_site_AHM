@@ -12,6 +12,7 @@ export default function Register() {
   const [position, setPosition] = useState('');
   const [age, setAge] = useState(0);
   const [languages, setLanguages] = useState([]);
+  const [bio, setBio] = useState('');
 
   let userData = localStorage.getItem('users');
   const [users, setUsers]= useState( userData ? [...JSON.parse(userData)] : [] );
@@ -116,6 +117,7 @@ export default function Register() {
       password,
       age,
       address,
+      bio,
       position,
       languages
     }
