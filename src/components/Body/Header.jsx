@@ -49,16 +49,6 @@ function Header() {
     function toggleMobileMenu() {
         setMobileMenuActive(!mobileMenuActive);
         isToggle()
-        // if (mobileMenuActive) {
-        //     return <div style={{width: '100vw', background: 'white'}}>
-        //         <a href="/#title1-mission">Our Mission</a>
-        //         <a href="/">Services</a>
-        //         <Link to='/developers'>Developers</Link>
-        //         <Link to="/contact">Contact</Link>
-        //     </div>
-        // } else {
-        //     return null;
-        // }
     }
 
     const [ on, setOn ] = useState(false);
@@ -71,7 +61,6 @@ function Header() {
         if (width < 768) {
             return <div>
                 <h1 className='toggledMenuIcon'><MenuIcon style={{fontSize:'2rem'}} onClick={toggleMobileMenu}/></h1>
-                {/* {toggleMobileMenu} */}
             </div>;
         } else {
             return <div>
@@ -102,10 +91,10 @@ function Header() {
                 animate={{ scale: on ? 1 : 0 }}
                 transition={{ ease: 'easeOut' }}
             >
-                <a href="/#title1-mission">Our Mission</a>
-                <a href="/">Services</a>
-                <Link to='/developers'>Developers</Link>
-                <Link to="/contact">Contact</Link>
+                <a onClick={toggleMobileMenu} href="/#title1-mission">Our Mission</a>
+                <a onClick={toggleMobileMenu} href="/">Services</a>
+                <Link onClick={toggleMobileMenu} to='/developers'>Developers</Link>
+                <Link onClick={toggleMobileMenu} to="/contact">Contact</Link>
             </motion.div>
         </header>
     )
