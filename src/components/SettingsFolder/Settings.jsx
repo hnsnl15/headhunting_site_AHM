@@ -25,6 +25,7 @@ function toggle(){
         document.getElementById('position').disabled = true;
         document.getElementById('technology').disabled = true;
         document.getElementById('btnAddTechnology').disabled = true;
+        document.getElementById('btnSubmit').disabled = true;
     }
     else{
         document.getElementById('fname').disabled = false;
@@ -34,6 +35,7 @@ function toggle(){
         document.getElementById('position').disabled = false;
         document.getElementById('technology').disabled = false;
         document.getElementById('btnAddTechnology').disabled = false;
+        document.getElementById('btnSubmit').disabled = false;
     }
 }
 
@@ -58,23 +60,24 @@ function handlePosition(e){
 function handleSubmit(e){
     e.preventDefault();
 
-    let users = JSON.parse(localStorage.getItem('users'));
-    let old_users =[...users].filter(user =>{return user.id !== id});
 
-    const data = {
-        id,
-        firstname,
-        email,
-        lastname,
-        password,
-        age,
-        address,
-        position
-    };
-    localStorage.setItem('CurrentUser', JSON.stringify(data));
-    localStorage.setItem('users', JSON.stringify([...old_users, data]));
-alert('Successfully Updated')
-toggle()
+        let users = JSON.parse(localStorage.getItem('users'));
+        let old_users =[...users].filter(user =>{return user.id !== id});
+    
+        const data = {
+            id,
+            firstname,
+            email,
+            lastname,
+            password,
+            age,
+            address,
+            position
+        };
+        localStorage.setItem('CurrentUser', JSON.stringify(data));
+        localStorage.setItem('users', JSON.stringify([...old_users, data]));
+    alert('Successfully Updated');
+    toggle();
 }
 
   return (
@@ -122,7 +125,7 @@ toggle()
                     <input disabled='true' type="button" id='btnAddTechnology' className='px-2 py-1 col-sm-1 mx-1 btn btn-info' value={'Add'} />
             </div>
             <div>
-                    <table className='col-sm-8 bg-dark text-center offset-sm-2 striped'>
+                <table className='col-sm-8 bg-dark text-center offset-sm-2 striped'>
                         <thead >
                             <tr>
                                 <td className='text-light p-2'><h5>Skills</h5></td>
@@ -149,12 +152,11 @@ toggle()
                                 <td className='text-dark p-2'>React JS</td>
                                 <td><input type="button" className='btn btn-danger' value={'Remove'} /></td>
                             </tr>
-                                
                         </tbody>
-                    </table>
+                </table>
             </div>
             <div className='row p-2'>
-                    <input type="submit" className='btn btn-primary' value={'Submit'} />
+                    <input id='btnSubmit' disabled='true' type="submit" className='btn btn-primary w-100' value={'Submit'} />
             </div>
             </div>
 
