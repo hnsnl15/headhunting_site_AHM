@@ -1,23 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Homemade+Apple&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
-}
-
-.settings-editToggle {
-  background-color: white;
-  display: flex;
-  width: 70vw;
-  justify-content: end;
-  color: black;
 }
 
 .settings {
   width: 100vw;
   min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .settings .container {
@@ -31,15 +28,26 @@
 }
 
 .settings .container .settings-header div.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5px;
 }
 
 .settings .container .settings-header div.name div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid black;
 }
 
@@ -60,8 +68,13 @@
 }
 
 .settings .container .settings-header .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
 }
 
@@ -77,8 +90,12 @@
   height: 30px;
   background-color: #1B2430;
   border-radius: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1px;
   border: 1px solid #1B2430;
   cursor: pointer;
@@ -93,12 +110,15 @@
   height: 28px;
   border-radius: 50%;
   background-color: #f8ec03;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 .settings .container .settings-header .toggle .editText {
-  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   color: black;
 }
 
@@ -109,4 +129,44 @@
 
 .settings .container .settings-body #btnAddTechnology {
   text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .settings {
+    width: 100vw;
+  }
+  .settings .container {
+    width: 100%;
+    background-color: white;
+  }
+  .settings .container .settings-header {
+    border-bottom: 2px solid #1B2430;
+  }
+  .settings .container .settings-header div.name {
+    gap: 10px;
+  }
+  .settings .container .settings-header div.name div label {
+    color: black;
+  }
+  .settings .container .settings-header .toggle {
+    margin: 2rem 0;
+  }
+  .settings .container .settings-body div table {
+    border: 1px solid gray;
+    text-align: center;
+    width: 100%;
+  }
+  .settings .container .settings-body #btnAddTechnology {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .settings {
+    width: 100vw;
+  }
+  .settings .container {
+    width: 100%;
+  }
 }

@@ -80,7 +80,7 @@ toggle()
   return (
     <form action="" disabled className='settings' onSubmit={handleSubmit}>
         <div className="container">
-           <div className='settings-header p-2 row'>
+           <div className='settings-header row'>
                 <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
                     <div className='d-flex align-items-center'>
@@ -110,12 +110,12 @@ toggle()
                 </div>
            </div>
 
-
            <div className='settings-body'>
             <div className='row p-2'>
                     <h3 className='text-dark col-sm-2'>Position :</h3> 
-                    <input disabled='true' id='position' className='w-75 px-2 py-1 col-sm-10' value={position} onChange={handlePosition} type="text" />
+                    <input disabled='true' id='position' className='w-sm-75 px-2 py-1 col-sm-10' value={position} onChange={handlePosition} type="text" />
             </div>
+
             <div className='row p-2'>
                     <h4 className='text-dark col-sm-2'>Technology:</h4> 
                     <input disabled='true' id='technology' className='px-2 py-1 col-sm-6' type="text" />
