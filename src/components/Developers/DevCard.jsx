@@ -19,7 +19,7 @@ export default function DevCard(props) {
           <h2 className='dev-name'>{name()}</h2>
           <p className='dev-role'>{user.position}</p>
           <p className='dev-description'>
-            Languages:
+            My Tech Stack:
             <ul>
             {
               [...(user.languages)].map( language => {
