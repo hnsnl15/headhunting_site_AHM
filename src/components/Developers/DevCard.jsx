@@ -3,6 +3,7 @@ import profile_picture from '../imgrsr/profile.png';
 
 export default function DevCard(props) {
   const user = props.user;
+  console.log(user)
 
   const name = () => {
     return  `${user.lastname}, ${user.firstname}`;
@@ -17,7 +18,15 @@ export default function DevCard(props) {
         <div className='dev-card-text'>
           <h2 className='dev-name'>{name()}</h2>
           <p className='dev-role'>{user.position}</p>
-          <p className='dev-description'>Lorem ipsum blah blah blah x2 x2 x2 times two.</p>
+          <p className='dev-description'>
+            Languages:
+            <ul>
+            {
+              [...(user.languages)].map( language => {
+                return <li>{language}</li>
+              })
+            }</ul>
+          </p>
           <p className='dev-location'>{user.address}</p>
         </div>
         <div className='dev-card-actions'>
