@@ -169,10 +169,10 @@ export default function Register() {
         </select>
 
         <h4>And I'm a</h4>
-        <button className='pos-btn' type='button' onClick={handlePosition}>Front-End Web Developer</button>
-        <button className='pos-btn' type='button' onClick={handlePosition}>Backend Developer</button>
-        <button className='pos-btn' type='button' onClick={handlePosition}>Full Stack Web Developer</button>
-        <button className='pos-btn' type='button' onClick={handlePosition}>Mobile Developer</button>
+        <button className='pos-btn' onClick={handlePosition}>Front-End Web Developer</button>
+        <button className='pos-btn' onClick={handlePosition}>Backend Developer</button>
+        <button className='pos-btn' onClick={handlePosition}>Full Stack Web Developer</button>
+        <button className='pos-btn' onClick={handlePosition}>Mobile Developer</button>
 
         <input className='w-100 btn btn-secondary my-2 rounded-0' type="submit" value="Next" />
       </form>

@@ -74,6 +74,8 @@ form input[type="submit"] {
 } */
 
 .pos-btn {
+    width: min(300px, 100%);
+
     margin: 1em auto;
     padding: 0.5em 1em;
     border: 2px solid black;
