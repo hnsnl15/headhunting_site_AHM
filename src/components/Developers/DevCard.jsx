@@ -18,6 +18,7 @@ export default function DevCard(props) {
         <div className='dev-card-text'>
           <h2 className='dev-name'>{name()}</h2>
           <p className='dev-role'>{user.position}</p>
+          <p className='dev-email'>{user.email}</p>
           <p className='dev-description'>
             My Tech Stack:
             <ul>
@@ -30,7 +31,7 @@ export default function DevCard(props) {
           <p className='dev-location'>{user.address}</p>
         </div>
         <div className='dev-card-actions'>
-          <a target='_blank' href='https://google.com'>Portfolio</a>
+          <a className='btn btn-primary' target='_blank' href='https://google.com'>Portfolio</a>
         </div>
       </div>
     </div>
