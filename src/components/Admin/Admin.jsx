@@ -51,18 +51,6 @@ export default function Admin() {
           }
         </tbody>
       </table>
-      {/* <table border='1' cellPadding='5'>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Location</th>
-            <th>Role</th>
-            <th>Delete</th>
-          </tr>
-
-        </thead>
-      </table> */}
     </div>
   )
 }
