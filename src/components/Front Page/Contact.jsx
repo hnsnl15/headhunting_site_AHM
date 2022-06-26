@@ -6,7 +6,7 @@ export default function Contact() {
     <form className='contact' action="">
         <h3 className='text-center mt-1'>Contact Us</h3>
         <div className='container row d-flex justify-content-between'>
-            <div className="form-design col-sm-6 ms-5">
+            <div className="form-design col-md-6 ms-sm-5">
               <div className='d-flex'>
                   <span>
                     <svg className='bg-light text-dark p-2 rounded-circle' xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -24,7 +24,7 @@ export default function Contact() {
                       <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                     </svg>
                   </span>
-                  <span className='ms-2' >
+                  <span className='ms-sm-2' >
                       <p className='text-primary'><h5>Phone</h5></p>
                       <p>+63 912-179-3542</p>
                   </span>
@@ -36,14 +36,13 @@ export default function Contact() {
                     </svg>
                     
                   </span>
-                  <span className='ms-2' >
+                  <span className='ms-sm-2' >
                       <p className='text-primary'><h5>Email Address</h5></p>
                       <p>lambanog_info@gmail.com</p>
                   </span>
               </div>
-                
             </div>
-            <div className="form-input col-sm-5 text-dark p-5">
+            <div className="form-input col-md-5 text-dark p-sm-5">
                 <h5>Send message</h5>
                 <div className='row d-flex align-items-center'>
                   <input className='col-sm-12' type="text" name='firstname' placeholder='Full Name' />

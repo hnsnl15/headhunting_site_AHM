@@ -14,6 +14,7 @@ const [password, setPassword] = useState(currUser.password);
 const [age, setAge] = useState(currUser.age);
 const [address, setAddress] = useState(currUser.address);
 const [position, setPosition] = useState(currUser.position);
+const [languages, setLanguages] = useState(currUser.languages);
 
 function toggle(){
     setToggleActive(!toggleActive);
@@ -60,7 +61,6 @@ function handlePosition(e){
 function handleSubmit(e){
     e.preventDefault();
 
-
         let users = JSON.parse(localStorage.getItem('users'));
         let old_users =[...users].filter(user =>{return user.id !== id});
     
@@ -72,6 +72,7 @@ function handleSubmit(e){
             password,
             age,
             address,
+            languages,
             position
         };
         localStorage.setItem('CurrentUser', JSON.stringify(data));

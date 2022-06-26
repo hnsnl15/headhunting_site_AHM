@@ -61,3 +61,15 @@ form.contact .container .form-design {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  form.contact .container {
+    width: 100vw;
+  }
+  form.contact .container .form-input {
+    width: 100vw;
+  }
+  form.contact .container .btn {
+    width: 100%;
+  }
+}
