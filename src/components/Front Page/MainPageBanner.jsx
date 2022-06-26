@@ -1,5 +1,6 @@
 import React from 'react';
 import Svg1 from '../imgrsr/Svg1';
+import {motion} from 'framer-motion'
 
 function MainPageBanner() {
 
@@ -13,9 +14,9 @@ function MainPageBanner() {
             
         </section>
         <section className='main-banner-section-2'>
-            <div>
+            <motion.div whileHover={{scale: 1.1}}>
               <Svg1/> 
-            </div>
+            </motion.div>
         </section>
     </div>
   )

@@ -13,6 +13,8 @@ function FrontPage() {
     <br/>
     <br/>
     <Mission/>
+    <br/>
+    <br/>
     <hr/>
     <br/>
     <br/>
