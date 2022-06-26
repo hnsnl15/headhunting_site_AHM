@@ -374,9 +374,17 @@ body {
             display: flex;
             margin: 0;
             gap: 10px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 auto;
+            background: transparent;
             input {
                 width: 210px;
+                border-radius: 10px;
                 border: transparent 2px solid;
+                padding: 0.5rem;
             }
             button {
                 display: flex;
@@ -452,7 +460,7 @@ body {
     align-items: flex-end;
     flex-wrap: wrap;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.7);
+    background: #fff;
     a {
         text-decoration: none;
         z-index: 101;
