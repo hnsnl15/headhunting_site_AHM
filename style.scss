@@ -40,7 +40,6 @@ body {
     padding: 1.4rem;
     font-size: 1.2rem;
     width: 100vw;
-
     #logo-header {
         h1 {
             padding-left: 1.2rem;
@@ -124,7 +123,12 @@ body {
             font-weight: 600;
             line-height: 1.5;
             width: max-content;
-            transform: translateX(100px);
+            transform: translateX(70px);
+            span {
+                margin-left: 1em;
+                background-color: $secondary-color;
+                color: black;
+            }
         }
     }
     .main-banner-section-2 {
@@ -143,29 +147,26 @@ body {
         }
     }
 }
+
 // MISSION RULESET
 .our-mission {
     display: flex;
     justify-content: space-evenly;
-
     figure {
         display: flex;
         justify-content: center;
         align-items: center;
         min-width: 50vw;
-
         svg {
             width: 80%;
         }
     }
-
     .our-mission-text {
         line-height: 2;
         min-width: 50vw;
         min-height: max-content;
         display: grid;
         place-content: center;
-
         h1 {
             margin-bottom: 30px;
             width: 75%;
@@ -178,14 +179,18 @@ body {
             font-weight: 700;
             padding: 0 auto;
         }
-
         p {
             font-size: 1.3rem;
             width: 90%;
+            span {
+                margin-left: 1em;
+                background-color: $secondary-color;
+                color: black;
+            }
         }
     }
-
 }
+
 .mission-cards {
     display: flex;
     width: 100vw;
@@ -196,12 +201,10 @@ body {
     line-height: 2;
     flex-wrap: wrap;
     gap: 60px;
-
     div {
         display: flex;
         flex-direction: column;
         max-width: 350px;
-        
         h2 {
             font-size: 2rem;
         }
@@ -219,11 +222,11 @@ body {
             }
         }
     }
-
     .div-mission-2 {
         transform: translateY(-9px);
     }
 }
+
 // OUR SERVICES RULESET
 .our-services {
     height: auto;
@@ -233,13 +236,11 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 50px;
-
     h1 {
         font-size: 3rem;
         text-align: center;
         margin: 20vh auto 5vh;
     }
-    
     figcaption {
         max-width: 350px;
         text-align: start;
@@ -247,12 +248,10 @@ body {
         line-height: 2;
         display: grid;
         gap: 40px;
-
         p {
             font-size: 1.2rem;
             text-align: justify;
         }
-
         a {
             padding: 1rem;
             font-size: 1rem;
@@ -263,82 +262,71 @@ body {
             text-decoration: none;
             color: $primary-color;
             transition: all 200ms ease-in-out;
-
             &:hover {
-                background: rgba(0,0,0,0.4);
+                background: rgba(0, 0, 0, 0.4);
                 color: #fff;
             }
         }
     }
-
     .our-services-fig-1 {
         width: 100%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        padding:  2rem auto;
+        padding: 2rem auto;
         gap: 30px;
-
         img {
             width: 50vw;
             max-width: 600px;
             border-radius: 100px;
         }
-
     }
-
     .our-services-fig-2 {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            gap: 30px;
-            padding: 2rem auto;
-            
-            img {
-                width: 40vw;
-                max-width: 300px;
-                border-radius: 100px;
-            }
-            
-    }  
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 30px;
+        padding: 2rem auto;
+        img {
+            width: 40vw;
+            max-width: 300px;
+            border-radius: 100px;
+        }
+    }
 }
 
-     //BRANDS RULESET
-    .sponsor-section {
-        width: 96vw;
-        margin: 10vh auto;
-        height: max-content;
-        background: $primary-color;
+//BRANDS RULESET
+.sponsor-section {
+    width: 96vw;
+    margin: 10vh auto;
+    height: max-content;
+    background: $primary-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+        align-self: center;
+        padding-top: 50px;
+        color: $secondary-color;
+        font-weight: 700;
+    }
+    .brands {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        
-        h1 {
-            align-self: center;
-            padding-top: 50px;
-            color: $secondary-color;
-            font-weight: 700;
-        }
-        
-        .brands {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 50px 1rem;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.5);
-            gap: 40px;
-
-            span img {
-                width: 40vw;
-                max-width: 250px;
-            }
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 1rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.5);
+        gap: 40px;
+        span img {
+            width: 40vw;
+            max-width: 250px;
         }
     }
-
+}
 
 // FOOTER RULESET
 .footer-navigation {
@@ -348,14 +336,12 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    
     div {
         flex: 1;
         p {
-            word-spacing: 0;    
+            word-spacing: 0;
         }
     }
-
     .footer-logo-container {
         display: grid;
         place-content: center;
@@ -364,12 +350,10 @@ body {
             color: $text-color-1;
         }
     }
-
     .footer-contact-container {
         display: grid;
         place-content: center;
         padding: 4rem;
-
         form {
             display: flex;
             margin: 0;
@@ -402,7 +386,6 @@ body {
             }
         }
     }
-
     .footer-social-container {
         border-left: $secondary-color 2px solid;
         display: flex;
@@ -443,9 +426,11 @@ body {
         }
     }
 }
+
 .toggledMenuIcon {
     z-index: 100;
 }
+
 .toggledMenu {
     justify-content: space-around;
     gap: 20px;
@@ -471,16 +456,10 @@ body {
         }
     }
 }
+
 .ko {
     color: $secondary-color;
 }
-
-
-
-
-
-
-
 
 // MEDIA QUERY
 @media screen and (max-width:776px) {
@@ -488,7 +467,6 @@ body {
         flex-direction: column;
         align-items: center;
         padding-top: 5vh;
-
         .main-banner-section-1 {
             width: 100vw;
             padding: 1rem;
@@ -496,17 +474,18 @@ body {
                 transform: translateX(0);
             }
         }
-
         .main-banner-section-2 {
             width: 100vw;
         }
     }
 }
+
 @media screen and (max-width: 1226px) {
     .our-mission {
         flex-wrap: wrap-reverse;
     }
 }
+
 @media screen and (max-width: 1086px) {
     .our-services {
         align-items: center;
@@ -533,7 +512,6 @@ body {
             justify-content: center;
             padding: 0 auto;
             margin: 0 auto;
-
             img {
                 margin: 0 auto;
                 min-width: 75%;
@@ -545,7 +523,6 @@ body {
             justify-content: center;
             padding: 0 auto;
             margin: 0 auto;
-
             img {
                 margin: 0 auto;
                 min-width: 65%;
@@ -560,7 +537,7 @@ body {
         }
         .footer-contact-container {
             gap: 10px;
-            p { 
+            p {
                 width: 100%;
                 padding: 0 auto;
                 margin: 0 auto;
@@ -572,22 +549,24 @@ body {
                     width: 70%;
                 }
                 button {
-                    width: 28%; 
+                    width: 28%;
                 }
             }
         }
     }
 }
+
 @media screen and (max-width: 1055px) {
     .our-mission-text {
         padding-left: 3rem;
     }
 }
-@media screen and (max-width: 550px) { 
+
+@media screen and (max-width: 550px) {
     .mission-section {
         padding: 0;
         margin: 0 auto;
-        width: 100vw; 
+        width: 100vw;
     }
     p {
         transform: scale(.85);
@@ -608,7 +587,6 @@ body {
         padding: 0;
         display: grid;
         place-items: center;
-        
         h1 {
             font-size: 7.5vw;
             word-wrap: break-word;
@@ -618,6 +596,7 @@ body {
         }
     }
 }
+
 @media screen and (max-width: 767px) {
     .main-banner-section-1 {
         h1 {

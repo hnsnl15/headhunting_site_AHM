@@ -161,8 +161,14 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  -webkit-transform: translateX(70px);
+          transform: translateX(70px);
+}
+
+.main-banner .main-banner-section-1 h1 span {
+  margin-left: 1em;
+  background-color: #D6D5A8;
+  color: black;
 }
 
 .main-banner .main-banner-section-2 {
@@ -242,6 +248,12 @@ body {
 .our-mission .our-mission-text p {
   font-size: 1.3rem;
   width: 90%;
+}
+
+.our-mission .our-mission-text p span {
+  margin-left: 1em;
+  background-color: #D6D5A8;
+  color: black;
 }
 
 .mission-cards {
