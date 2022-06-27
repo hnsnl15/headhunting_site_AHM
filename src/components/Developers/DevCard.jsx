@@ -31,7 +31,7 @@ export default function DevCard(props) {
           <p className='dev-location'>{user.address}</p>
         </div>
         <div className='dev-card-actions'>
-          <a className='btn btn-primary' target='_blank' href='https://google.com'>Portfolio</a>
+          <a className='btn btn-primary' target='_blank' href={user.portfolio}>Portfolio</a>
         </div>
       </div>
     </div>

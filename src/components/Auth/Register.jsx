@@ -128,7 +128,8 @@ export default function Register() {
       address,
       bio,
       position,
-      languages
+      languages,
+      portfolio
     }
     console.log(new_user)
     localStorage.setItem('users', JSON.stringify([...users, new_user]));
