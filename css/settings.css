@@ -38,7 +38,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5px;
+  gap: 15px;
 }
 
 .settings .container .settings-header div.name div {

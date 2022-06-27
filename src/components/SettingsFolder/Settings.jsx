@@ -89,7 +89,7 @@ function handleSubmit(e){
   return (
     <form action="" disabled className='settings' onSubmit={handleSubmit}>
         <div className="container">
-           <div className='settings-header row'>
+           <div className='settings-header row py-5'>
                 <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
                     <div className='d-flex align-items-center'>
@@ -118,7 +118,7 @@ function handleSubmit(e){
                 </div>
            </div>
 
-           <div className='settings-body'>
+           <div className='settings-body py-3'>
             <div className='row p-2'>
                     <h3 className='text-dark col-sm-2'>Bio :</h3> 
                     <input disabled='true' id='bio' className='w-sm-75 px-2 py-1 col-sm-10' value={bio} onChange={handleBio} type="text" />
