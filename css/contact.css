@@ -7,8 +7,8 @@
 }
 
 form.contact {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,6 +19,19 @@ form.contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  padding-top: 10px;
+}
+
+form.contact h3 {
+  margin: 5px;
+  cursor: default;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form.contact h3:hover {
+  letter-spacing: 5px;
 }
 
 form.contact .container {
@@ -63,6 +76,9 @@ form.contact .container .form-design {
 }
 
 @media screen and (max-width: 600px) {
+  form.contact {
+    width: 100vw;
+  }
   form.contact .container {
     width: 100vw;
   }

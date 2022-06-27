@@ -7,7 +7,7 @@
 }
 
 .settings {
-  width: 100vw;
+  width: 80vw;
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@
 }
 
 .settings .container {
-  width: 70%;
+  width: 90%;
   height: 100%;
   background-color: white;
 }
@@ -122,42 +122,8 @@
   color: black;
 }
 
-.settings .container .settings-body #languages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  gap: 2em;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.settings .container .settings-body #languages #languages > h4 {
-  width: 100%;
-}
-
-.settings .container .settings-body #languages .language {
-  cursor: pointer;
-  padding: 1em;
-  border: 3px solid black;
-  border-radius: 0.5em;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
-}
-
-.settings .container .settings-body #languages .language.active {
-  border-color: green;
-}
-
-.settings .container .settings-body #languages #languages,
-.settings .container .settings-body #languages #additional-info {
-  display: none;
-  padding: 2em;
+.settings .container .settings-body {
+  color: black;
 }
 
 @media screen and (max-width: 700px) {

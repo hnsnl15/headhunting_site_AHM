@@ -14,11 +14,21 @@ $hover-text-color: rgba(179,
 }
 
 form.contact {
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    padding-top: 10px;
+    h3 {
+        margin: 5px;
+        cursor: default;
+        transition: 0.5s;
+        &:hover {
+            letter-spacing: 5px;
+        }
+    }
     .container {
         width: 70vw;
         .form-input {
@@ -48,6 +58,7 @@ form.contact {
 
 @media screen and (max-width: 600px) {
     form.contact {
+        width: 100vw;
         .container {
             width: 100vw;
             .form-input {
