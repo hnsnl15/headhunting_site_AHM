@@ -27,6 +27,16 @@
   border-bottom: 2px solid #1B2430;
 }
 
+.settings .container .settings-header img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.settings .container .settings-header img:hover {
+  -webkit-box-shadow: 0px 0px 20px #D6D5A8;
+          box-shadow: 0px 0px 20px #D6D5A8;
+}
+
 .settings .container .settings-header div.name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +93,13 @@
   border: 1px solid gray;
   padding: 10px;
   border-radius: 10px;
+  cursor: default;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.settings .container .settings-header .toggle h4:hover {
+  letter-spacing: 3px;
 }
 
 .settings .container .settings-header .toggle .toggleButton {

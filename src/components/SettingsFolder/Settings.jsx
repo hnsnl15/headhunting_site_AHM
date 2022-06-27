@@ -90,7 +90,7 @@ function handleSubmit(e){
     <form action="" disabled className='settings' onSubmit={handleSubmit}>
         <div className="container">
            <div className='settings-header row py-5'>
-                <img className='img img-thumbnail img-fluid col-sm-2' src={profile} alt="Profile" />
+                <img className='img img-thumbnail profile img-fluid col-sm-2' src={profile} alt="Profile" />
                 <div className='col-sm-6 name'>
                     <div className='d-flex align-items-center'>
                         <label className='text-right'>Name :</label>
@@ -129,7 +129,7 @@ function handleSubmit(e){
             </div>
 
             <div className='row p-2'>
-                    <input id='btnSubmit' disabled='true' type="submit" className='btn btn-primary w-100' value={'Submit'} />
+                    <input id='btnSubmit' disabled='true' type="submit" className='btn btn-secondary w-100' value={'Submit'} />
             </div>
             </div>
 
