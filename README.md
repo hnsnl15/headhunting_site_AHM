@@ -12,3 +12,7 @@ Adonis, Henson, and Miguel created this project as our second Mini-project for K
 # Preview
 
 # Deployment
+
+You may visit the deployed web app through the link below.
+
+- [https://amiralles-guessmynumber.netlify.app/](resilient-crepe-519cdd.netlify.app/)
