@@ -15,4 +15,4 @@ Adonis, Henson, and Miguel created this project as our second Mini-project for K
 
 You may visit the deployed web app through the link below.
 
-- [https://amiralles-guessmynumber.netlify.app/](resilient-crepe-519cdd.netlify.app/)
+- [https://resilient-crepe-519cdd.netlify.app//]
