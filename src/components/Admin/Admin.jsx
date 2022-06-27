@@ -72,7 +72,7 @@ export default function Admin() {
                 >
                   {isAdmin(user)}
                 </td>
-                <td style={{cursor:'pointer'}}>{isAdmin(user)}>
+                <td style={{cursor:'pointer'}}>
                   <DeleteIcon onClick={ () => deleteUser(user.id)} />
                 </td>
               </tr>
