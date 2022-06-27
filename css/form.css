@@ -1,10 +1,7 @@
-/* main { border: 1px solid white; } */
-
 :root {
     --color-hover: #d6d5a8;
 }
 
-#languages,
 form {
     margin: 0 auto;
     width: min(600px, 90%);
@@ -26,11 +23,6 @@ p[id$='-error'] {
     display: none;
 }
 
-/* form input {
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-} */
-
 form .input {
     border: none;
     border-radius: 0;
@@ -43,35 +35,19 @@ form input[type="submit"] {
 }
 
 .form-field {
+    width: 100%;
     border-bottom: 2px solid black;
+}
+
+.form-field select {
+    -webkit-appearance: none;
+    border: none;
+    padding: 10px;
 }
 
 .Register {
     font-size: 14px;
 }
-
-/* .Register .input {
-    border: none;
-    border-radius: 0;
-    padding: 10px;
-    outline: none;
-    border-bottom: 1px solid black;
-} */
-
-/* .login {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    color: black;
-} */
-
-/* .login .input {
-    border: none;
-    border-radius: 0;
-    outline: none;
-    background-color: none;
-    width: 100%;
-} */
 
 .pos-btn {
     width: min(300px, 100%);
