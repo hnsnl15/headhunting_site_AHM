@@ -14,7 +14,7 @@ export default function Admin() {
   }
 
   const deleteUser = id => {
-    if (id === props.currUser.id) return null;
+    if (id === currUser.id) return null;
     let filteredUsers = users.filter( user => user.id !== id );
     setUsers(filteredUsers);
   }
@@ -66,8 +66,13 @@ export default function Admin() {
                 <td>{user.email}</td>
                 <td>{user.address}</td>
                 <td>{user.position}</td>
-                <td onClick={() => toggleAdmin(user.id)} style={{cursor:'pointer'}}>{isAdmin(user)}</td>
-                <td>
+                <td
+                onClick={() => toggleAdmin(user.id)}
+                style={{cursor:'pointer'}}
+                >
+                  {isAdmin(user)}
+                </td>
+                <td style={{cursor:'pointer'}}>{isAdmin(user)}>
                   <DeleteIcon onClick={ () => deleteUser(user.id)} />
                 </td>
               </tr>
