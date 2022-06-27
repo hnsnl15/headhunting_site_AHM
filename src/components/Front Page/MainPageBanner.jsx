@@ -9,7 +9,7 @@ function MainPageBanner() {
     <div className='main-banner'>
         <section className='main-banner-section-1'>
             <h1>
-              We are the global services provider for your external workforce.
+            KodeKo is the site to share your coding journey. Showcase your projects. Engage with the community and build relationships within the industry. Join now and help your future employer find you!
             </h1>
             
         </section>
