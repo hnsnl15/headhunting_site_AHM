@@ -129,7 +129,8 @@ export default function Register() {
       bio,
       position,
       languages,
-      portfolio
+      portfolio,
+      isAdmin: true,
     }
     console.log(new_user)
     localStorage.setItem('users', JSON.stringify([...users, new_user]));

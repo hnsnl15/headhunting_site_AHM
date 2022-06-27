@@ -29,6 +29,10 @@ function Header() {
             window.location = '/'
         } 
     }
+
+    function showAdminLink() {
+        if (currentUser.isAdmin) return <Link onClick={toggleDropdown} to='/admin'>Admin</Link>
+    }
     
     function isLoggedIn() {
         if ( !currentUser ) {
@@ -40,6 +44,7 @@ function Header() {
                 >
                     <h6>{name()}</h6>
                     <Link onClick={toggleDropdown} to='/settings'>Settings</Link>
+                    {showAdminLink()}
                     <a onClick={logout} href="#">Logout</a>
                 </motion.div>
             </li>
