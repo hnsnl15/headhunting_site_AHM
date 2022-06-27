@@ -45,6 +45,7 @@ export default function Admin() {
     style = {{
       width: 'min(1600px, 80%)',
       margin: 'auto',
+      overflow: 'scroll',
     }}
     >
       <table className="table table-striped table-hover table-dark">
