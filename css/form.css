@@ -88,7 +88,11 @@ form input[type="submit"] {
 
 .language.active,
 .language:hover {
-    border-color: green;
+    border-color: lightgreen;
+}
+
+.language.active {
+    background-color: lightgreen;
 }
 
 #languages,
