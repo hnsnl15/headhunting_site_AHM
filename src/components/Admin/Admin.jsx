@@ -6,12 +6,15 @@ import CancelIcon from '@mui/icons-material/Cancel';
 export default function Admin() {
   let userData = localStorage.getItem('users');
   const [users, setUsers] = useState(userData ? JSON.parse(userData) : []);
+  let currUserData = localStorage.getItem('CurrentUser');
+  const [currUser, setCurrUser] = useState( currUserData ? JSON.parse(currUserData) : null);
 
   const name = user => {
     return `${user.firstname} ${user.lastname}`;
   }
 
   const deleteUser = id => {
+    if (id === props.currUser.id) return null;
     let filteredUsers = users.filter( user => user.id !== id );
     setUsers(filteredUsers);
   }
@@ -20,9 +23,22 @@ export default function Admin() {
     return user.isAdmin ? <CheckCircleIcon /> : <CancelIcon />;
   }
 
+  const toggleAdmin = id => {
+    let newUsers = users.map( user => {
+      if (user.id == id) { user.isAdmin = !user.isAdmin; }
+      if (user.id == currUser.id) { setCurrUser(user) }
+      return user;
+    })
+    setUsers(newUsers);
+  }
+
   useEffect( () => {
     localStorage.setItem('users', JSON.stringify(users));
   }, [users])
+
+  useEffect( () => {
+    localStorage.setItem('CurrentUser', JSON.stringify(currUser));
+  }, [currUser])
 
   return (
     <div
@@ -50,7 +66,7 @@ export default function Admin() {
                 <td>{user.email}</td>
                 <td>{user.address}</td>
                 <td>{user.position}</td>
-                <td>{isAdmin(user)}</td>
+                <td onClick={() => toggleAdmin(user.id)} style={{cursor:'pointer'}}>{isAdmin(user)}</td>
                 <td>
                   <DeleteIcon onClick={ () => deleteUser(user.id)} />
                 </td>
