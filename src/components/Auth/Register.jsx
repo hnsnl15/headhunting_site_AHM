@@ -178,8 +178,8 @@ export default function Register() {
           <select name='location' id='location' onChange={handleLocation}>
             <option value='null' selected disabled >Select location</option>
             <option value='Manila, NCR'>Manila, NCR</option>
-            <option value='Cebu City, Cebu'>Cebu City, Cebu</option>
-            <option value='Davao City, Davao del Sur'>Davao City, Davao del Sur</option>
+            <option value='Cebu City'>Cebu City</option>
+            <option value='Davao City'>Davao City</option>
           </select>
         </div>
 
