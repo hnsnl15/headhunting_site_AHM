@@ -292,7 +292,7 @@ export default function Register() {
 
         <div className='form-field'>
           {/* <label htmlFor='portfolio'>Portfolio</label> */}
-          <input className='input' type='url' name='portfolio' id='portfolio' placeholder='Portfolio URL' onChange={handlePortfolio} required />
+          <input className='input' type='url' name='portfolio' id='portfolio' placeholder='Portfolio URL' onChange={handlePortfolio}/>
           <p id='portfolio-error'></p>
         </div>
 
