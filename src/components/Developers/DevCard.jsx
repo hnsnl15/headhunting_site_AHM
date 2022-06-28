@@ -1,5 +1,6 @@
 import React from 'react';
 import profile_picture from '../imgrsr/profile.png';
+import TechSvg from '../imgrsr/TechSvg';
 
 export default function DevCard(props) {
   const user = props.user;
@@ -24,7 +25,7 @@ export default function DevCard(props) {
             <ul>
             {
               [...(user.languages)].map( language => {
-                return <li>{language}</li>
+                return <TechSvg tech={language} />
               })
             }</ul>
           </p>

@@ -30,6 +30,13 @@ section {
     border-radius: 50%;
 }
 
+.dev-description > ul  {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
 .dev-card-body {
     padding: 1em 2em;
 }
