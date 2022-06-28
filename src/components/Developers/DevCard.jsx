@@ -10,6 +10,10 @@ export default function DevCard(props) {
     return  `${user.lastname}, ${user.firstname}`;
   }
 
+  const address = () => {
+    return user.address == 'Cebu City, Cebu' ? 'Cebu City' : user.address == 'Davao City, Davao del Sur' ? 'Davao City' : user.address;
+  }
+
   return (
     <div className='dev-card'>
       <div className='dev-card-img'>
@@ -29,7 +33,7 @@ export default function DevCard(props) {
               })
             }</ul>
           </p>
-          <p className='dev-location'>{user.address}</p>
+          <p className='dev-location'>{address()}</p>
         </div>
         <div className='dev-card-actions'>
           <a className='btn btn-primary' target='_blank' href={user.portfolio}>Portfolio</a>
