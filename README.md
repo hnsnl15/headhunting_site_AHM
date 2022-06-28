@@ -68,6 +68,12 @@ This project was created as a course requirement for our Full Stack Web Developm
 
 **Members:**
 - Galvez, Juan Miguel
+    email: jmtgalvez@gmail.com
+    portfolio: https://jmtgalvez.github.io/
 - Lao, Henson
+    email: hensonlao@gmail.com
+    portfolio: https://steady-rugelach-a60b23.netlify.app/?fbclid=IwAR3jWa0HGcpuUDiZxLPrL9jBzNwgyVSRAy7_A2m2CpCRgb10SlMYwKDaJIA
 - Suico, Adonis
+    email: adonisjr.suico@gmail.com
+    portfolio: https://adonisjr.github.io/myportfolio.github.io/
 
