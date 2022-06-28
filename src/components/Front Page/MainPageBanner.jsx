@@ -9,7 +9,7 @@ function MainPageBanner() {
     <div className='main-banner'>
         <section className='main-banner-section-1'>
             <h1>
-            <span>KodeKo</span> is the site to share your coding journey. Showcase your projects. Engage with the community and build relationships within the industry. Join now and help your future employer find you!
+            Join now and help your future employer find you!
             </h1>
             
         </section>

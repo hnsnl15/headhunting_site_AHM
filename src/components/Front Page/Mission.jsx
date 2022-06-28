@@ -14,7 +14,7 @@ function Mission() {
             <h1 id='title1-mission'>Our Mission</h1>
             <h1 id='title2-mission'>#WEARECHANGEMAKERS</h1>
             <p>
-            <span>KodeKo</span> aims to create a space where developers can show off their skills and attract potential employers that are looking for developers.
+            KodeKo aims to create a space where developers can show off their skills and attract potential employers that are looking for developers. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, molestias recusandae? Reprehenderit quos alias assumenda dignissimos dolorum. Hic, minus tempore.
             </p>
         </section>
       </section>
