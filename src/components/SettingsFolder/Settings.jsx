@@ -16,6 +16,7 @@ const [address, setAddress] = useState(currUser.address);
 const [position, setPosition] = useState(currUser.position);
 const [languages, setLanguages] = useState(currUser.languages);
 const [bio, setBio] = useState(currUser.bio);
+const [portfolio, setPortfolio] = useState(currUser.portfolio);
 
 
 function toggle(){
@@ -28,6 +29,7 @@ function toggle(){
         document.getElementById('position').disabled = true;
         document.getElementById('btnSubmit').disabled = true;
         document.getElementById('bio').disabled = true;
+        document.getElementById('portfolio').disabled = true;
     }
     else{
         document.getElementById('fname').disabled = false;
@@ -37,6 +39,7 @@ function toggle(){
         document.getElementById('position').disabled = false;
         document.getElementById('btnSubmit').disabled = false;
         document.getElementById('bio').disabled = false;
+        document.getElementById('portfolio').disabled = false;
     }
 }
 
@@ -61,6 +64,9 @@ function handlePosition(e){
 function handleBio(e){
     return setBio(e.target.value);
 }
+function handlePortfolio(e){
+    return setPortfolio(e.target.value);
+}
 
 function handleSubmit(e){
     e.preventDefault();
@@ -77,6 +83,7 @@ function handleSubmit(e){
             age,
             address,
             bio,
+            portfolio,
             languages,
             position
         };
@@ -126,6 +133,10 @@ function handleSubmit(e){
             <div className='row p-2'>
                     <h3 className='text-dark col-sm-2'>Position :</h3> 
                     <input disabled='true' id='position' className='w-sm-75 px-2 py-1 col-sm-10' value={position} onChange={handlePosition} type="text" />
+            </div>
+            <div className='row p-2'>
+                    <h3 className='text-dark col-sm-2'>Portfolio url:</h3> 
+                    <input disabled='true' id='portfolio' className='w-sm-75 px-2 py-1 col-sm-10' value={portfolio} onChange={handlePortfolio} type="text" />
             </div>
 
             <div className='row p-2'>
